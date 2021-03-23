@@ -1,0 +1,2887 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"9700abca30",applicationID:"9339867"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(6),c=e(7),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(8);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(5),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,w=["click","keydown","mousedown","pointerdown","touchstart"];w.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],4:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],5:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],6:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],7:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],8:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?u(e,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){e&&a&&e(n,r,i);for(var c=t(i),f=v(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[h[n]];return p&&p.push([b,n,r,c]),c}}function o(e,t){y[e]=v(e).concat(t)}function m(e,t){var n=y[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return y[e]||[]}function g(e){return p[e]=p[e]||i(n)}function w(e,t){s(e,function(e,n){t=t||"feature",h[n]=t,t in d||(d[t]=[])})}var y={},h={},b={on:o,addEventListener:o,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:w,abort:c,aborted:!1};return b}function o(e){return u(e,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=e("gos"),s=e(6),d={},p={},l=t.exports=i();t.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=b.info=NREUM.info,t=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(y,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=e(2),c=e("handle"),f=e(6),u=e("ee"),s=e(4),d=window,p=d.document,l="addEventListener",m="attachEvent",v=d.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:v,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var w=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1198.min.js"},h=v&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a.getLastTimestamp(),now:a,origin:w,features:{},xhrWrappable:h,userAgent:s};e(1),e(3),p[l]?(p[l]("DOMContentLoaded",o,!1),d[l]("load",r,!1)):(p[m]("onreadystatechange",i),d[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var x=0},{}],"wrap-function":[function(e,t,n){function r(e,t){function n(t,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],e)}c(n+"start",[o,a,f],s,u);try{return p=t.apply(a,o)}catch(m){throw c(n+"err",[o,a,m],s,u),m}finally{c(n+"end",[o,a,p],s,u)}}return a(t)?t:(n||(n=""),nrWrapper[p]=t,o(t,nrWrapper,e),nrWrapper)}function r(e,t,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<t.length;u++)f=t[u],c=e[f],a(c)||(e[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!m||t){var c=m;m=!0;try{e.emit(n,r,o,t,a)}catch(f){i([f,n,r,o],e)}m=c}}return e||(e=s),n.inPlace=r,n.flag=p,n}function i(e,t){t||(t=s);try{t.emit("internal-error",e)}catch(n){}}function o(e,t,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(e);return r.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(o){i([o],n)}for(var a in e)l.call(e,a)&&(t[a]=e[a]);return t}function a(e){return!(e&&e instanceof Function&&e.apply&&!e[p])}function c(e,t){var n=t(e);return n[p]=e,o(e,n,s),n}function f(e,t,n){var r=e[t];e[t]=c(r,n)}function u(){for(var e=arguments.length,t=new Array(e),n=0;n<e;++n)t[n]=arguments[n];return t}var s=e("ee"),d=e(7),p="nr@original",l=Object.prototype.hasOwnProperty,m=!1;t.exports=r,t.exports.wrapFunction=c,t.exports.wrapInPlace=f,t.exports.argsToArray=u},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#2c3888">
+<link rel="pingback" href="https://vamtam.com/xmlrpc.php" />
+<title>Vamtam Themes</title>
+<style id="vamtam-theme-options">:root {--vamtam-site-max-width:1260px;
+--vamtam-body-background-background-image:none;
+--vamtam-body-background-background-color:#ffffff;
+--vamtam-body-background-background-repeat:no-repeat;
+--vamtam-body-background-background-attachment:scroll;
+--vamtam-body-background-background-size:cover;
+--vamtam-body-background-background-position:center center;
+--vamtam-accent-color-1:#2c3888;
+--vamtam-accent-color-2:#020d26;
+--vamtam-accent-color-3:#06163a;
+--vamtam-accent-color-4:#d8d8d8;
+--vamtam-accent-color-5:#ffffff;
+--vamtam-accent-color-6:#000000;
+--vamtam-accent-color-7:#EDEDED;
+--vamtam-accent-color-8:#ffffff;
+--vamtam-accent-color-1-hc:#ffffff;
+--vamtam-accent-color-2-hc:#ffffff;
+--vamtam-accent-color-3-hc:#ffffff;
+--vamtam-accent-color-4-hc:#000000;
+--vamtam-accent-color-5-hc:#000000;
+--vamtam-accent-color-6-hc:#ffffff;
+--vamtam-accent-color-7-hc:#000000;
+--vamtam-accent-color-8-hc:#000000;
+--vamtam-h1-font-family:'Open Sans';
+--vamtam-h1-font-size:60px;
+--vamtam-h1-font-weight:bold;
+--vamtam-h1-font-style:normal;
+--vamtam-h1-line-height:1.03;
+--vamtam-h1-color:#2c3888;
+--vamtam-h2-font-family:'Open Sans';
+--vamtam-h2-font-size:46px;
+--vamtam-h2-font-weight:300;
+--vamtam-h2-font-style:normal;
+--vamtam-h2-line-height:1.35;
+--vamtam-h2-color:#000000;
+--vamtam-h3-font-family:'Open Sans';
+--vamtam-h3-font-size:30px;
+--vamtam-h3-font-weight:300;
+--vamtam-h3-font-style:normal;
+--vamtam-h3-line-height:1.2;
+--vamtam-h3-color:#000000;
+--vamtam-h4-font-family:'Open Sans';
+--vamtam-h4-font-size:22px;
+--vamtam-h4-font-weight:300;
+--vamtam-h4-font-style:normal;
+--vamtam-h4-line-height:1.27;
+--vamtam-h4-color:#2c3888;
+--vamtam-h5-font-family:'Open Sans';
+--vamtam-h5-font-size:16px;
+--vamtam-h5-font-weight:normal;
+--vamtam-h5-font-style:normal;
+--vamtam-h5-line-height:1.5;
+--vamtam-h5-color:#2c3888;
+--vamtam-h6-font-family:'Open Sans';
+--vamtam-h6-font-size:12px;
+--vamtam-h6-font-weight:600;
+--vamtam-h6-font-style:normal;
+--vamtam-h6-line-height:1.17;
+--vamtam-h6-color:#000000;
+--vamtam-em-font-family:'Open Sans';
+--vamtam-em-font-size:16px;
+--vamtam-em-font-weight:300;
+--vamtam-em-font-style:italic;
+--vamtam-em-line-height:1.5;
+--vamtam-em-color:#3f485d;
+--vamtam-additional-font-1-font-family:'Open Sans';
+--vamtam-additional-font-1-font-size:30px;
+--vamtam-additional-font-1-font-weight:300;
+--vamtam-additional-font-1-font-style:normal;
+--vamtam-additional-font-1-line-height:1.07;
+--vamtam-additional-font-1-color:#45545e;
+--vamtam-additional-font-2-font-family:'Rubik';
+--vamtam-additional-font-2-font-size:60px;
+--vamtam-additional-font-2-font-weight:300;
+--vamtam-additional-font-2-font-style:normal;
+--vamtam-additional-font-2-line-height:1.23;
+--vamtam-additional-font-2-color:#020d26;
+--vamtam-header-height:80px;
+--vamtam-header-background-background-image:none;
+--vamtam-header-background-background-color:#ffffff;
+--vamtam-header-background-background-repeat:repeat;
+--vamtam-header-background-background-attachment:scroll;
+--vamtam-header-background-background-size:auto;
+--vamtam-header-background-background-position:left top;
+--vamtam-sub-header-background-background-image:none;
+--vamtam-sub-header-background-background-color:#e2e2e2;
+--vamtam-sub-header-background-background-repeat:repeat;
+--vamtam-sub-header-background-background-attachment:fixed;
+--vamtam-sub-header-background-background-size:auto;
+--vamtam-sub-header-background-background-position:left top;
+--vamtam-page-title-background-background-image:none;
+--vamtam-page-title-background-background-color:;
+--vamtam-page-title-background-background-repeat:repeat;
+--vamtam-page-title-background-background-attachment:fixed;
+--vamtam-page-title-background-background-size:auto;
+--vamtam-page-title-background-background-position:left top;
+--vamtam-logo-font-family:'Montserrat';
+--vamtam-logo-font-size:36px;
+--vamtam-logo-font-weight:600;
+--vamtam-logo-font-style:normal;
+--vamtam-logo-line-height:1.22;
+--vamtam-logo-color:#06163a;
+--vamtam-main-menu-text-sticky-color:#ffffff;
+--vamtam-left-sidebar-width:30%;
+--vamtam-right-sidebar-width:30%;
+--vamtam-main-background-background-image:none;
+--vamtam-main-background-background-color:#ffffff;
+--vamtam-main-background-background-repeat:repeat;
+--vamtam-main-background-background-attachment:scroll;
+--vamtam-main-background-background-size:auto;
+--vamtam-main-background-background-position:left top;
+--vamtam-primary-font-font-family:'Open Sans';
+--vamtam-primary-font-font-size:14px;
+--vamtam-primary-font-font-weight:300;
+--vamtam-primary-font-font-style:normal;
+--vamtam-primary-font-line-height:1.57;
+--vamtam-primary-font-color:#2c3888;
+--vamtam-body-link-regular:#c0bbb5;
+--vamtam-body-link-hover:#ffffff;
+--vamtam-body-link-visited:#939393;
+--vamtam-body-link-active:#0a0000;
+--vamtam-footer-sidebars-titles-font-family:'Open Sans';
+--vamtam-footer-sidebars-titles-font-size:14px;
+--vamtam-footer-sidebars-titles-font-weight:500;
+--vamtam-footer-sidebars-titles-font-style:normal;
+--vamtam-footer-sidebars-titles-line-height:1.57;
+--vamtam-footer-sidebars-titles-color:#4a4a4a;
+--vamtam-mobile-top-bar-resolution:600px;
+--vamtam-beaver-global-row_margins:0px;
+--vamtam-beaver-global-row_margins_unit:px;
+--vamtam-beaver-global-row_margins_medium_unit:px;
+--vamtam-beaver-global-row_margins_responsive_unit:px;
+--vamtam-beaver-global-row_padding:20px;
+--vamtam-beaver-global-row_padding_unit:px;
+--vamtam-beaver-global-row_padding_medium_unit:px;
+--vamtam-beaver-global-row_padding_responsive_unit:px;
+--vamtam-beaver-global-row_content_width_default:fixed;
+--vamtam-beaver-global-column_margins_unit:px;
+--vamtam-beaver-global-column_margins_medium_unit:px;
+--vamtam-beaver-global-column_margins_responsive_unit:px;
+--vamtam-beaver-global-column_padding_unit:px;
+--vamtam-beaver-global-column_padding_medium_unit:px;
+--vamtam-beaver-global-column_padding_responsive_unit:px;
+--vamtam-beaver-global-module_margins:10px;
+--vamtam-beaver-global-module_margins_unit:px;
+--vamtam-beaver-global-module_margins_medium_unit:px;
+--vamtam-beaver-global-module_margins_responsive_unit:px;
+--vamtam-beaver-global-responsive_enabled:1;
+--vamtam-beaver-global-auto_spacing:1;
+--vamtam-beaver-global-medium_breakpoint:992;
+--vamtam-beaver-global-responsive_breakpoint:768;
+--vamtam-beaver-global-responsive_preview:;
+--vamtam-beaver-global-responsive_col_max_width:1px;
+--vamtam-beaver-global-responsive_base_fontsize:16px;
+--vamtam-beaver-global-row_width:1280px;
+--vamtam-beaver-global-row_width_unit:px;
+--vamtam-beaver-global-show_default_heading:;
+--vamtam-default-bg-color:#ffffff;
+--vamtam-default-line-color:#EDEDED;
+--vamtam-small-padding:20px;
+--vamtam-horizontal-padding:50px;
+--vamtam-vertical-padding:30px;
+--vamtam-horizontal-padding-large:60px;
+--vamtam-vertical-padding-large:60px;
+--vamtam-no-border-link:none;
+--vamtam-border-radius:0px;
+--vamtam-border-radius-oval:0px;
+--vamtam-overlay-color:#ffffff;
+--vamtam-overlay-color-hc:#000000;
+--vamtam-box-outer-padding:60px;
+--vamtam-loading-animation:url('https://vamtam.com/wp-content/themes/nex/vamtam/assets/images/loader-ring.gif');
+--vamtam-accent-color-1-rgb:44,56,136;
+--vamtam-accent-color-2-rgb:2,13,38;
+--vamtam-accent-color-3-rgb:6,22,58;
+--vamtam-accent-color-4-rgb:216,216,216;
+--vamtam-accent-color-5-rgb:255,255,255;
+--vamtam-accent-color-6-rgb:0,0,0;
+--vamtam-accent-color-7-rgb:237,237,237;
+--vamtam-accent-color-8-rgb:255,255,255;
+}</style><link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Vamtam Themes &raquo; Feed" href="https://vamtam.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Vamtam Themes &raquo; Comments Feed" href="https://vamtam.com/comments/feed/" />
+<link rel='stylesheet' id='wp-block-library-css' href='https://vamtam.com/wp-includes/css/dist/block-library/style.min.css?ver=5.6.2' type='text/css' media="(max-width: 0px)" onload="media='all'" /><noscript><link rel='stylesheet'   href='https://vamtam.com/wp-includes/css/dist/block-library/style.min.css?ver=5.6.2' type='text/css' media='all' />
+</noscript>
+<link rel='stylesheet' id='fl-builder-layout-6-css' href='https://vamtam.com/wp-content/uploads/bb-plugin/cache/6-layout.css?ver=6bd3a0114ea3fb154a89577b06b64371' type='text/css' media='all' />
+<link rel='stylesheet' id='rs-plugin-settings-css' href='https://vamtam.com/wp-content/plugins/revslider/public/assets/css/rs6.css?ver=6.3.1' type='text/css' media="(max-width: 0px)" onload="media='all'" /><noscript><link rel='stylesheet'   href='https://vamtam.com/wp-content/plugins/revslider/public/assets/css/rs6.css?ver=6.3.1' type='text/css' media='all' />
+</noscript>
+<style id='rs-plugin-settings-inline-css' type='text/css'>
+#rs-demo-id {}
+</style>
+<link rel='stylesheet' id='megamenu-css' href='https://vamtam.com/wp-content/uploads/maxmegamenu/style.css?ver=786478' type='text/css' media='all' />
+<style>
+				@font-face {
+					font-family: dashicons;
+					src: url(data:application/font-woff2;charset=utf-8;base64,d09GMgABAAAAAAHMAAsAAAAABAwAAAGDAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAABmAAVBEIClBXATYCJAMUCwwABCAFgwYHIBtGA8gusG3YowATcOTIbUAdBLCHiYfv96Od+2RFPCSX5G0Xa6LTGZpXvNLJtOKhkzR/c1sL5UNf+Gxqlo/fhh4i6A6mBpOYuTllNJdrvH/imvylL5amD/TC0UAVXLXNIolHL7JKLOTdBPe2pTSahoHDU6CUWNADchEfVNLHFN5Ll/hlJdoRXfQ5fEh+H2aNhCwwBKjOgczalMFmyvbZlGITHdokSZj7fdhsGtA4Gj0OC1UPsXyiF1TQgYJuDKG54mS7nBEtwXx043/UG2yZOf7Kl9ffm727/9s6C/i5XlYpZPGAXL4GgqzJXJL/0AVqQWERDwCoUUDMELR7fAY3tP43SlrdUiAj60BBHmNVp2GsRavz4x0mvJIsSrvQo7UACXkIZGQPKMgTrBoxh7XocfHPO6z61Asn6dIVNBH5NcTqdF2aX3QNhKUjp5bMW9wYPfntC7QzLOQDzTGYcF15RN/6EI6wjap3rp4W5mYmR7mDm3oI/Bmq2aAW77jUaQycV5dkBA==) format('woff2'),
+						url(/wp-includes/fonts/dashicons.ttf) format("truetype"),
+						url(/wp-includes/fonts/dashicons.svg#dashicons) format("svg");
+					font-weight: normal;
+					font-style: normal;
+					font-display: swap;
+					unicode-range: U+F140;
+				}
+
+
+				@font-face {
+					font-family: dashicons;
+					src: url(/wp-includes/fonts/dashicons.woff) format("woff"),
+						url(/wp-includes/fonts/dashicons.ttf) format("truetype"),
+						url(/wp-includes/fonts/dashicons.svg#dashicons) format("svg");
+					font-weight: normal;
+					font-style: normal;
+					font-display: swap;
+					unicode-range: U+F100-F10D, U+F110-F112, U+F115-F119, U+F11D-F120, U+F122-F130, U+F132-F136, U+F138-F139, U+F141-F142, U+F145, U+F147-F148, U+F153-F159, U+F160-F161, U+F163-F169, U+F171-F179, U+F180-F185, U+F200-F201, U+F203-F209, U+F210-F219, U+F220-F227, U+F229, U+F230-F239, U+F240, U+F242, U+F301, U+F303-F309, U+F310-F314, U+F316-F319, U+F320-F326, U+F328, U+F330-F339, U+F340-F348, U+F448-F449, U+F450-F457, U+F459, U+F460, U+F462-F466, U+F468-F469, U+F470-F476, U+F478-F479, U+F480-F484, U+F486-F489, U+F490-F493, U+F495-F499, U+F500-F504, U+F506-F509, U+F510-F519, U+F520-F529, U+F530-F531, U+F533-F538, U+F540-F542, U+F545-F547;
+				}
+			</style><link rel='stylesheet' id='vamtam-front-all-css' href='https://vamtam.com/wp-content/themes/nex/vamtam/assets/css/dist/all.css?ver=1611093026' type='text/css' media='all' />
+<style id='vamtam-front-all-inline-css' type='text/css'>
+
+			@font-face {
+				font-family: 'icomoon';
+				src: url(https://vamtam.com/wp-content/themes/nex/vamtam/assets/fonts/icons/icomoon.woff2) format('woff2'),
+				     url( https://vamtam.com/wp-content/themes/nex/vamtam/assets/fonts/icons/icomoon.woff) format('woff'),
+				     url(https://vamtam.com/wp-content/themes/nex/vamtam/assets/fonts/icons/icomoon.ttf) format('ttf');
+				font-weight: normal;
+				font-style: normal;
+				font-display: swap;
+			}
+		
+				@font-face {
+					font-family: 'theme';
+					src: url(https://vamtam.com/wp-content/themes/nex/vamtam/assets/fonts/theme-icons/theme-icons.woff2) format('woff2'),
+						url(https://vamtam.com/wp-content/themes/nex/vamtam/assets/fonts/theme-icons/theme-icons.woff) format('woff');
+					font-weight: normal;
+					font-style: normal;
+					font-display: swap;
+				}
+			
+/* Make Beaver options play nice with the theme */
+
+
+.vamtam-box-outer-padding,
+.limit-wrapper,
+.header-padding {
+	padding-left: calc( var( --vamtam-box-outer-padding ) + var( --vamtam-block-margin-desktop-left, var( --vamtam-beaver-global-module_margins ) ) );
+	padding-right: calc( var( --vamtam-box-outer-padding ) + var( --vamtam-block-margin-desktop-right, var( --vamtam-beaver-global-module_margins ) ) );
+}
+
+body:not(.single-tribe_events):not(.post-type-archive).fl-builder #main > .limit-wrapper,
+body .fl-row-content-wrap {
+	padding-left: var( --vamtam-box-outer-padding );
+	padding-right: var( --vamtam-box-outer-padding );
+}
+
+body:not(.single-tribe_events):not(.post-type-archive).fl-builder #main > .limit-wrapper {
+	max-width: calc( var( --vamtam-site-max-width ) + 2 * var( --vamtam-beaver-global-module_margins ) );
+}
+
+
+.vamtam-box-outer-padding .vamtam-box-outer-padding,
+body .vamtam-box-outer-padding .fl-row-content-wrap,
+.limit-wrapper .limit-wrapper {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+body .post-content .fl-row-full-width .fl-row-fixed-width {
+	padding-left: var( --vamtam-box-outer-padding );
+	padding-right: var( --vamtam-box-outer-padding );
+}
+
+@media ( max-width: 1460px ) {
+	.post-siblings {
+		display: none;
+	}
+}
+
+@media ( min-width: 993px ) and ( max-width: 1260px ) {
+	.vamtam-box-outer-padding,
+	.limit-wrapper,
+	.header-padding {
+		padding-left: calc( 30px + var( --vamtam-block-margin-desktop-left, var( --vamtam-beaver-global-module_margins ) ) );
+		padding-right: calc( 30px + var( --vamtam-block-margin-desktop-right, var( --vamtam-beaver-global-module_margins ) ) );
+	}
+
+	body:not(.single-tribe_events):not(.post-type-archive).fl-builder #main > .limit-wrapper,
+	body .fl-row-content-wrap {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+
+	body .post-content .fl-row-full-width .fl-row-fixed-width {
+		padding-left: calc( 20px + var( --vamtam-block-margin-desktop-left, var( --vamtam-beaver-global-module_margins ) ) );
+		padding-right: calc( 20px + var( --vamtam-block-margin-desktop-right, var( --vamtam-beaver-global-module_margins ) ) );
+	}
+}
+
+@media ( max-width: 992px ) {
+	.vamtam-box-outer-padding,
+	.limit-wrapper,
+	.header-padding {
+		padding-left: calc( 20px + var( --vamtam-block-margin-tablet-left, var( --vamtam-beaver-global-module_margins ) ) );
+		padding-right: calc( 20px + var( --vamtam-block-margin-tablet-right, var( --vamtam-beaver-global-module_margins ) ) );
+	}
+
+	body:not(.single-tribe_events):not(.post-type-archive).fl-builder #main > .limit-wrapper,
+	body .fl-row-content-wrap {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	body .post-content .fl-row-full-width .fl-row-fixed-width {
+		padding-left: calc( 10px + var( --vamtam-beaver-global-module_margins ) );
+		padding-right: calc( 10px + var( --vamtam-beaver-global-module_margins ) );
+	}
+
+	body:not(.single-tribe_events):not(.post-type-archive).fl-builder #main:not(.layout-full) .limit-wrapper {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	body .post-content .fl-row-full-width .fl-row-fixed-width,
+	body #main:not(.layout-full) .fl-builder-content > .fl-row-full-width .fl-row-fixed-width,
+	body #main:not(.layout-full) .fl-builder-content > .fl-row-full-width .fl-row-full-width,
+	body #main:not(.layout-full) .fl-builder-content > .fl-row-fixed-width {
+		padding-left: calc( 10px + var( --vamtam-block-margin-tablet-left, var( --vamtam-beaver-global-module_margins ) ) );
+		padding-right: calc( 10px + var( --vamtam-block-margin-tablet-right, var( --vamtam-beaver-global-module_margins ) ) );
+	}
+}
+
+@media ( max-width: 768px ) {
+	.vamtam-box-outer-padding,
+	.limit-wrapper,
+	.header-padding {
+		padding-left: calc( 10px + var( --vamtam-block-margin-phone-left, var( --vamtam-beaver-global-module_margins ) ) );
+		padding-right: calc( 10px + var( --vamtam-block-margin-phone-right, var( --vamtam-beaver-global-module_margins ) ) );
+	}
+
+	body #main:not(.layout-full) .fl-builder-content > .fl-row-full-width .fl-row-fixed-width,
+	body #main:not(.layout-full) .fl-builder-content > .fl-row-full-width .fl-row-full-width,
+	body #main:not(.layout-full) .fl-builder-content > .fl-row-fixed-width {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+	:root { scroll-behavior: smooth; }
+		@media ( max-width: 600px ) {
+			#rev_slider_2_1_wrapper {
+				height: calc( 100vh - 65px );
+			}
+		}
+
+			
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_bZF3gTD_u50.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_bZF3g3D_u50.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_bZF3gbD_u50.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_bZF3gfD_u50.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_bZF3gnD_g.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_dJE3gTD_u50.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_dJE3g3D_u50.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_dJE3gbD_u50.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_dJE3gfD_u50.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_dJE3gnD_g.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/memnYaGs126MiZpBA-UFUKWyV9hmIqOjjg.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/memnYaGs126MiZpBA-UFUKWyV9hvIqOjjg.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/memnYaGs126MiZpBA-UFUKWyV9hnIqOjjg.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/memnYaGs126MiZpBA-UFUKWyV9hoIqOjjg.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/memnYaGs126MiZpBA-UFUKWyV9hkIqOjjg.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/memnYaGs126MiZpBA-UFUKWyV9hlIqOjjg.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/memnYaGs126MiZpBA-UFUKWyV9hrIqM.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UN_r8OX-hpOqc.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UN_r8OVuhpOqc.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UN_r8OXuhpOqc.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UN_r8OUehpOqc.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UN_r8OXehpOqc.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UN_r8OXOhpOqc.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UN_r8OUuhp.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem8YaGs126MiZpBA-UFWJ0bbck.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem8YaGs126MiZpBA-UFUZ0bbck.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem8YaGs126MiZpBA-UFWZ0bbck.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem8YaGs126MiZpBA-UFVp0bbck.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem8YaGs126MiZpBA-UFWp0bbck.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem8YaGs126MiZpBA-UFW50bbck.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem8YaGs126MiZpBA-UFVZ0b.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UNirkOX-hpOqc.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UNirkOVuhpOqc.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UNirkOXuhpOqc.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UNirkOUehpOqc.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UNirkOXehpOqc.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UNirkOXOhpOqc.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UNirkOUuhp.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UN7rgOX-hpOqc.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UN7rgOVuhpOqc.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UN7rgOXuhpOqc.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UN7rgOUehpOqc.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UN7rgOXehpOqc.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UN7rgOXOhpOqc.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UN7rgOUuhp.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/rubik/v12/iJWZBXyIfDnIV5PNhY1KTN7Z-Yh-WYiFWkU1Z4Y.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/rubik/v12/iJWZBXyIfDnIV5PNhY1KTN7Z-Yh-WYiFU0U1Z4Y.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* hebrew */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/rubik/v12/iJWZBXyIfDnIV5PNhY1KTN7Z-Yh-WYiFVUU1Z4Y.woff2) format('woff2');
+  unicode-range: U+0590-05FF, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/rubik/v12/iJWZBXyIfDnIV5PNhY1KTN7Z-Yh-WYiFWUU1Z4Y.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/rubik/v12/iJWZBXyIfDnIV5PNhY1KTN7Z-Yh-WYiFV0U1.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/rubik/v12/iJWZBXyIfDnIV5PNhY1KTN7Z-Yh-4I-FWkU1Z4Y.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/rubik/v12/iJWZBXyIfDnIV5PNhY1KTN7Z-Yh-4I-FU0U1Z4Y.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* hebrew */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/rubik/v12/iJWZBXyIfDnIV5PNhY1KTN7Z-Yh-4I-FVUU1Z4Y.woff2) format('woff2');
+  unicode-range: U+0590-05FF, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/rubik/v12/iJWZBXyIfDnIV5PNhY1KTN7Z-Yh-4I-FWUU1Z4Y.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/rubik/v12/iJWZBXyIfDnIV5PNhY1KTN7Z-Yh-4I-FV0U1.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+</style>
+<link rel='stylesheet' id='vamtam-theme-mobile-header-css' href='https://vamtam.com/wp-content/themes/nex/vamtam/assets/css/dist/responsive/mobile-header.css?ver=1611093026' type='text/css' media='(max-width: 600px)' />
+<link rel='stylesheet' id='vamtam-theme-layout-max-low-css' href='https://vamtam.com/wp-content/themes/nex/vamtam/assets/css/dist/responsive/layout-max-low.css?ver=1611093026' type='text/css' media="(max-width: 0px)" onload="media='(min-width: 993px) and (max-width: 1260px)'" /><noscript><link rel='stylesheet'   href='https://vamtam.com/wp-content/themes/nex/vamtam/assets/css/dist/responsive/layout-max-low.css?ver=1611093026' type='text/css' media='(min-width: 993px) and (max-width: 1260px)' />
+</noscript>
+<link rel='stylesheet' id='vamtam-theme-layout-max-css' href='https://vamtam.com/wp-content/themes/nex/vamtam/assets/css/dist/responsive/layout-max.css?ver=1611093026' type='text/css' media="(max-width: 0px)" onload="media='(min-width: 993px)'" /><noscript><link rel='stylesheet'   href='https://vamtam.com/wp-content/themes/nex/vamtam/assets/css/dist/responsive/layout-max.css?ver=1611093026' type='text/css' media='(min-width: 993px)' />
+</noscript>
+<link rel='stylesheet' id='vamtam-theme-layout-below-max-css' href='https://vamtam.com/wp-content/themes/nex/vamtam/assets/css/dist/responsive/layout-below-max.css?ver=1611093026' type='text/css' media="(max-width: 0px)" onload="media='(max-width: 992px)'" /><noscript><link rel='stylesheet'   href='https://vamtam.com/wp-content/themes/nex/vamtam/assets/css/dist/responsive/layout-below-max.css?ver=1611093026' type='text/css' media='(max-width: 992px)' />
+</noscript>
+<link rel='stylesheet' id='vamtam-theme-layout-small-css' href='https://vamtam.com/wp-content/themes/nex/vamtam/assets/css/dist/responsive/layout-small.css?ver=1611093026' type='text/css' media="(max-width: 0px)" onload="media='(max-width: 768px)'" /><noscript><link rel='stylesheet'   href='https://vamtam.com/wp-content/themes/nex/vamtam/assets/css/dist/responsive/layout-small.css?ver=1611093026' type='text/css' media='(max-width: 768px)' />
+</noscript>
+<script type='text/javascript' src='https://vamtam.com/wp-includes/js/jquery/jquery.min.js?ver=3.5.1' id='jquery-core-js'></script>
+<script type='text/javascript' defer src='https://vamtam.com/wp-content/plugins/revslider/public/assets/js/rbtools.min.js?ver=6.3.1' id='tp-tools-js'></script>
+<script type='text/javascript' defer src='https://vamtam.com/wp-content/plugins/revslider/public/assets/js/rs6.min.js?ver=6.3.1' id='revmin-js'></script>
+<link rel="https://api.w.org/" href="https://vamtam.com/wp-json/" /><link rel="alternate" type="application/json" href="https://vamtam.com/wp-json/wp/v2/pages/6" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://vamtam.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://vamtam.com/wp-includes/wlwmanifest.xml" />
+<link rel="canonical" href="https://vamtam.com/" />
+<link rel='shortlink' href='https://vamtam.com/' />
+<link rel="alternate" type="application/json+oembed" href="https://vamtam.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fvamtam.com%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://vamtam.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fvamtam.com%2F&#038;format=xml" />
+<link rel="icon" href="https://vamtam.com/wp-content/uploads/2018/04/cropped-vamtam-fav-1-150x150.png" sizes="32x32" />
+<link rel="icon" href="https://vamtam.com/wp-content/uploads/2018/04/cropped-vamtam-fav-1-292x292.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://vamtam.com/wp-content/uploads/2018/04/cropped-vamtam-fav-1-292x292.png" />
+<meta name="msapplication-TileImage" content="https://vamtam.com/wp-content/uploads/2018/04/cropped-vamtam-fav-1-292x292.png" />
+<script type="text/javascript">function setREVStartSize(e){
+			//window.requestAnimationFrame(function() {				 
+				window.RSIW = window.RSIW===undefined ? window.innerWidth : window.RSIW;	
+				window.RSIH = window.RSIH===undefined ? window.innerHeight : window.RSIH;	
+				try {								
+					var pw = document.getElementById(e.c).parentNode.offsetWidth,
+						newh;
+					pw = pw===0 || isNaN(pw) ? window.RSIW : pw;
+					e.tabw = e.tabw===undefined ? 0 : parseInt(e.tabw);
+					e.thumbw = e.thumbw===undefined ? 0 : parseInt(e.thumbw);
+					e.tabh = e.tabh===undefined ? 0 : parseInt(e.tabh);
+					e.thumbh = e.thumbh===undefined ? 0 : parseInt(e.thumbh);
+					e.tabhide = e.tabhide===undefined ? 0 : parseInt(e.tabhide);
+					e.thumbhide = e.thumbhide===undefined ? 0 : parseInt(e.thumbhide);
+					e.mh = e.mh===undefined || e.mh=="" || e.mh==="auto" ? 0 : parseInt(e.mh,0);		
+					if(e.layout==="fullscreen" || e.l==="fullscreen") 						
+						newh = Math.max(e.mh,window.RSIH);					
+					else{					
+						e.gw = Array.isArray(e.gw) ? e.gw : [e.gw];
+						for (var i in e.rl) if (e.gw[i]===undefined || e.gw[i]===0) e.gw[i] = e.gw[i-1];					
+						e.gh = e.el===undefined || e.el==="" || (Array.isArray(e.el) && e.el.length==0)? e.gh : e.el;
+						e.gh = Array.isArray(e.gh) ? e.gh : [e.gh];
+						for (var i in e.rl) if (e.gh[i]===undefined || e.gh[i]===0) e.gh[i] = e.gh[i-1];
+											
+						var nl = new Array(e.rl.length),
+							ix = 0,						
+							sl;					
+						e.tabw = e.tabhide>=pw ? 0 : e.tabw;
+						e.thumbw = e.thumbhide>=pw ? 0 : e.thumbw;
+						e.tabh = e.tabhide>=pw ? 0 : e.tabh;
+						e.thumbh = e.thumbhide>=pw ? 0 : e.thumbh;					
+						for (var i in e.rl) nl[i] = e.rl[i]<window.RSIW ? 0 : e.rl[i];
+						sl = nl[0];									
+						for (var i in nl) if (sl>nl[i] && nl[i]>0) { sl = nl[i]; ix=i;}															
+						var m = pw>(e.gw[ix]+e.tabw+e.thumbw) ? 1 : (pw-(e.tabw+e.thumbw)) / (e.gw[ix]);					
+						newh =  (e.gh[ix] * m) + (e.tabh + e.thumbh);
+					}				
+					if(window.rs_init_css===undefined) window.rs_init_css = document.head.appendChild(document.createElement("style"));					
+					document.getElementById(e.c).height = newh+"px";
+					window.rs_init_css.innerHTML += "#"+e.c+"_wrapper { height: "+newh+"px }";				
+				} catch(e){
+					console.log("Failure at Presize of Slider:" + e)
+				}					   
+			//});
+		  };</script>
+<style type="text/css" id="wp-custom-css">
+			header.main-header.layout-single-row .second-row {
+border-right: 0px;
+}
+
+footer.main-footer .fl-form-success-message p {
+    color: #fff;
+}
+
+.main-footer .widget.widget_nav_menu .menu li.current_page_item a, .main-footer .widget.widget_nav_menu .menu li:hover a {
+    color: #c0bbb5;
+}		</style>
+<style type="text/css">/** Mega Menu CSS: fs **/</style>
+</head>
+<body class="home page-template-default page page-id-6 wp-custom-logo wp-embed-responsive fl-builder mega-menu-menu-header full header-layout-logo-menu pagination-load-more sticky-header-type-over no-page-header no-middle-header has-header-slider responsive-layout sticky-header layout-full">
+<div id="top"></div>
+<div class="fixed-header-box sticky-header-state-reset" style="height:0;">
+<header class="main-header layout-logo-menu layout-single-row header-content-wrapper header-background">
+<div id="top-nav-wrapper">
+<nav class="top-nav">
+</nav>
+</div>
+<div class=" header-maybe-limit-wrapper header-padding">
+<div class="header-contents">
+<div class="first-row">
+<div class="logo-wrapper">
+<div class="logo-tagline">
+<a href="https://vamtam.com/" title="Vamtam Themes" class="logo " style="min-width:0px"> <img src="https://vamtam.com/wp-content/uploads/2018/04/logo-1.svg" alt="Vamtam Themes" class="normal-logo" style="" />
+<img src="https://vamtam.com/wp-content/uploads/2018/04/logo-trans.svg" alt="Vamtam Themes" class="alternative-logo" style="" />
+</a>
+</div>
+<div class="mobile-logo-additions">
+<div id="vamtam-megamenu-main-menu-toggle"></div>
+</div>
+</div>
+</div>
+<div class="second-row ">
+<div id="menus">
+<nav id="main-menu" class="">
+<a href="#main" title="Skip to content" class="visuallyhidden">Skip to content</a>
+<div id="mega-menu-wrap-menu-header" class="mega-menu-wrap"><div class="mega-menu-toggle"><div class="mega-toggle-blocks-left"></div><div class="mega-toggle-blocks-center"></div><div class="mega-toggle-blocks-right"><div class='mega-toggle-block mega-menu-toggle-block mega-toggle-block-1' id='mega-toggle-block-1' tabindex='0'><span class='mega-toggle-label' role='button' aria-expanded='false'><span class='mega-toggle-label-closed'>MENU</span><span class='mega-toggle-label-open'>MENU</span></span></div></div></div><ul id="mega-menu-menu-header" class="mega-menu max-mega-menu mega-menu-horizontal mega-no-js" data-event="hover_intent" data-effect="fade_up" data-effect-speed="200" data-effect-mobile="disabled" data-effect-speed-mobile="0" data-mobile-force-width="false" data-second-click="go" data-document-click="collapse" data-vertical-behaviour="standard" data-breakpoint="600" data-unbind="true" data-mobile-state="collapse_all" data-hover-intent-timeout="300" data-hover-intent-interval="100"><li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-home mega-current-menu-item mega-page_item mega-page-item-6 mega-current_page_item mega-align-bottom-left mega-menu-flyout mega-menu-item-749' id='mega-menu-item-749'><a class="mega-menu-link" href="https://vamtam.com/" tabindex="0">Hi</a></li><li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-align-bottom-left mega-menu-flyout mega-menu-item-750' id='mega-menu-item-750'><a class="mega-menu-link" href="https://vamtam.com/themes/" tabindex="0">Themes</a></li><li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-align-bottom-left mega-menu-flyout mega-menu-item-751' id='mega-menu-item-751'><a class="mega-menu-link" href="https://vamtam.com/support/" tabindex="0">Support</a></li></ul><div class="mobile-top-bar"></div></div></nav>
+</div>
+</div>
+</div>
+</div>
+</header>
+</div>
+<div id="page" class="main-container">
+<header class="header-middle type-slider">
+<div id="header-slider-container" class="revslider">
+<div class="header-slider-wrapper">
+<p class="rs-p-wp-fix"></p>
+<rs-module-wrap id="rev_slider_2_1_wrapper" data-source="gallery" style="background:#5975da;padding:0;">
+<rs-module id="rev_slider_2_1" style="" data-version="6.3.1">
+<rs-slides>
+<rs-slide data-key="rs-2" data-title="Slide" data-anim="ei:d;eo:d;s:600;r:0;t:fade;sl:d;">
+<img src="//vamtam.com/wp-content/plugins/revslider/public/assets/assets/transparent.png" alt="Slide" title="Home" data-bg="c:#5975da;f:contain;" class="rev-slidebg" data-no-retina>
+<rs-layer id="slider-2-slide-2-layer-1" class="rev-btn rev-withicon" data-type="button" data-color="#000000" data-xy="x:c;xo:0,0,0,-1px;y:b;yo:50px;" data-text="s:14;l:14;fw:700;a:center;" data-actions='o:click;a:simplelink;target:_self;url:/themes/;' data-rsp_bd="off" data-padding="t:15;r:30;b:15;l:30;" data-border="bos:solid;boc:#ffffff;bow:1px,1px,1px,1px;" data-frame_0="tp:600;" data-frame_1="tp:600;st:9.8959350585938;sR:9.8959350585938;" data-frame_999="o:0;tp:600;st:w;sR:8690.1043701172;" data-frame_hover="c:#fff;bgc:#000;boc:#000;bor:0px,0px,0px,0px;bos:solid;bow:1px,1px,1px,1px;oX:50;oY:50;" style="z-index:6;background-color:#ffffff;font-family:Open Sans;cursor:pointer;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;">View our themes
+</rs-layer><rs-layer id="slider-2-slide-2-layer-3" data-type="image" data-rsp_ch="on" data-xy="x:c;y:m;yo:0,0,0,-60px;" data-text="l:22;a:inherit;" data-dim="w:1600px,1600px,1600px,1100px;h:571px,571px,571px,393px;" data-frame_0="tp:600;" data-frame_1="tp:600;st:9.8959350585938;sR:9.8959350585938;" data-frame_999="o:0;tp:600;st:w;sR:8690.1043701172;" style="z-index:5;"><img src="//vamtam.com/wp-content/uploads/2015/08/vam-wallpaper.jpg" data-no-retina>
+</rs-layer> </rs-slide>
+</rs-slides>
+</rs-module>
+<script type="text/javascript">
+					setREVStartSize({c: 'rev_slider_2_1',rl:[1240,1240,1240,480],el:[600,600,600,500],gw:[1240,1240,1240,480],gh:[600,600,600,500],type:'hero',justify:'',layout:'fullscreen',offsetContainer:'',offset:'30%',mh:"500"});
+					var	revapi2,
+						tpj;
+					function revinit_revslider21() {
+					jQuery(function() {
+						tpj = jQuery;
+						revapi2 = tpj("#rev_slider_2_1");
+						if(revapi2==undefined || revapi2.revolution == undefined){
+							revslider_showDoubleJqueryError("rev_slider_2_1");
+						}else{
+							revapi2.revolution({
+								sliderType:"hero",
+								sliderLayout:"fullscreen",
+								visibilityLevels:"1240,1240,1240,480",
+								gridwidth:"1240,1240,1240,480",
+								gridheight:"600,600,600,500",
+								minHeight:500,
+								spinner:"spinner0",
+								perspectiveType:"local",
+								editorheight:"600,768,960,500",
+								responsiveLevels:"1240,1240,1240,480",
+								fullScreenOffset:"30%",
+								progressBar:{disableProgressBar:true},
+								navigation: {
+									onHoverStop:false
+								},
+								fallbacks: {
+									allowHTML5AutoPlayOnAndroid:true
+								},
+							});
+						}
+						
+					});
+					} // End of RevInitScript
+				var once_revslider21 = false;
+				if (document.readyState === "loading") {document.addEventListener('readystatechange',function() { if((document.readyState === "interactive" || document.readyState === "complete") && !once_revslider21 ) { once_revslider21 = true; revinit_revslider21();}});} else {once_revslider21 = true; revinit_revslider21();}
+				</script>
+</rs-module-wrap>
+
+</div>
+</div>
+</header>
+<div id="main-content">
+<div id="main" role="main" class="vamtam-main layout-full  ">
+<div class="page-wrapper">
+<article id="post-6" class="full post-6 page type-page status-publish hentry">
+<div class="page-content clearfix the-content-parent">
+<div class="fl-builder-content fl-builder-content-6 fl-builder-content-primary fl-builder-global-templates-locked" data-post-id="6"><div class="fl-row fl-row-full-width fl-row-bg-none fl-node-5ad88d84b0bea fl-row-bg-attachment-scroll" data-node="5ad88d84b0bea">
+<div class="fl-row-content-wrap">
+<div class="fl-row-content fl-row-fixed-width fl-node-content">
+<div class="fl-col-group fl-node-5ad88d84b2727" data-node="5ad88d84b2727">
+<div class="fl-col fl-node-5ad88e2476fed fl-col-small fl-visible-desktop-medium" data-node="5ad88e2476fed">
+<div class="fl-col-content fl-node-content">
+</div>
+</div>
+<div class="fl-col fl-node-5ad88d84b27ce fl-col-has-cols" data-node="5ad88d84b27ce">
+<div class="fl-col-content fl-node-content">
+<div class="fl-col-group fl-node-5ad88d898b7f5 fl-col-group-nested fl-col-group-equal-height fl-col-group-align-bottom fl-col-group-custom-width" data-node="5ad88d898b7f5">
+<div class="fl-col fl-node-5ad88d898b8e7 fl-col-small" data-node="5ad88d898b8e7">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-photo fl-node-5ad88da22cf23" data-node="5ad88da22cf23">
+<div class="fl-module-content fl-node-content">
+<div class="fl-photo fl-photo-align-center" itemscope itemtype="http://schema.org/ImageObject">
+<div class="fl-photo-content fl-photo-img-svg">
+<img loading="lazy" class="fl-photo-img wp-image-817 size-full" src="https://vamtam.com/wp-content/uploads/2018/04/icon-1.svg" alt="icon-1" itemprop="image" height="42" width="37" title="icon-1" />
+</div>
+</div>
+</div>
+</div>
+<div class="fl-module fl-module-vamtam-numbers fl-node-5ad890bad3639" data-node="5ad890bad3639">
+<div class="fl-module-content fl-node-content">
+<div class="fl-number fl-number-default">
+<div class="fl-number-text">
+<div class="fl-number-string" style=""><span class="fl-number-int"><noscript>45,000</noscript></span>+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-module fl-module-vamtam-heading fl-node-5ad895dd654e7" data-node="5ad895dd654e7">
+<div class="fl-module-content fl-node-content">
+<h6 class="vamtam-heading ">
+<span class="vamtam-heading-text">CLIENTS TRUST VAMTAM</span>
+</h6>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-col fl-node-5ad88d898b925 fl-col-small" data-node="5ad88d898b925">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-photo fl-node-5ad88dbabdc15" data-node="5ad88dbabdc15">
+<div class="fl-module-content fl-node-content">
+<div class="fl-photo fl-photo-align-center" itemscope itemtype="http://schema.org/ImageObject">
+<div class="fl-photo-content fl-photo-img-svg">
+<img loading="lazy" class="fl-photo-img wp-image-819 size-full" src="https://vamtam.com/wp-content/uploads/2018/04/icon-2.svg" alt="icon-2" itemprop="image" height="43" width="43" title="icon-2" />
+</div>
+</div>
+</div>
+</div>
+<div class="fl-module fl-module-vamtam-numbers fl-node-5ad890e00f1fc" data-node="5ad890e00f1fc">
+<div class="fl-module-content fl-node-content">
+<div class="fl-number fl-number-default">
+<div class="fl-number-text">
+<div class="fl-number-string" style=""><span class="fl-number-int"><noscript>30</noscript></span> DAYS</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-module fl-module-vamtam-heading fl-node-5ad89689349a5" data-node="5ad89689349a5">
+<div class="fl-module-content fl-node-content">
+<h6 class="vamtam-heading ">
+<span class="vamtam-heading-text">MONEY BACK GUARANTEE</span>
+</h6>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-col fl-node-5ad88d898b95f fl-col-small" data-node="5ad88d898b95f">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-photo fl-node-5ad88e09d538e" data-node="5ad88e09d538e">
+<div class="fl-module-content fl-node-content">
+<div class="fl-photo fl-photo-align-center" itemscope itemtype="http://schema.org/ImageObject">
+<div class="fl-photo-content fl-photo-img-svg">
+<img loading="lazy" class="fl-photo-img wp-image-821 size-full" src="https://vamtam.com/wp-content/uploads/2018/04/icon-3.svg" alt="icon-3" itemprop="image" height="41" width="40" title="icon-3" />
+</div>
+</div>
+</div>
+</div>
+<div class="fl-module fl-module-vamtam-heading fl-node-5ad8913fc0fcc" data-node="5ad8913fc0fcc">
+<div class="fl-module-content fl-node-content">
+<h2 class="vamtam-heading ">
+<span class="vamtam-heading-text">24/7/365</span>
+</h2>
+</div>
+</div>
+<div class="fl-module fl-module-vamtam-heading fl-node-5ad896ad3945b" data-node="5ad896ad3945b">
+<div class="fl-module-content fl-node-content">
+<h6 class="vamtam-heading ">
+<span class="vamtam-heading-text">DEDICATED SUPPORT TEAM</span>
+</h6>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-col fl-node-5ad88e1f71ba1 fl-col-small fl-visible-desktop-medium" data-node="5ad88e1f71ba1">
+<div class="fl-col-content fl-node-content">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-row fl-row-full-width fl-row-bg-none fl-node-5ad88d8e595db fl-row-bg-attachment-scroll" data-node="5ad88d8e595db">
+<div class="fl-row-content-wrap">
+<div class="fl-row-content fl-row-fixed-width fl-node-content">
+<div class="fl-col-group fl-node-5ad88d8e5aef5" data-node="5ad88d8e5aef5">
+<div class="fl-col fl-node-5ad88d8e5afd5" data-node="5ad88d8e5afd5">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-vamtam-heading fl-node-5ad897c2f07a1" data-node="5ad897c2f07a1">
+<div class="fl-module-content fl-node-content">
+<h2 class="vamtam-heading ">
+<span class="vamtam-heading-text">Latest theme releases</span>
+</h2>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-row fl-row-full-width fl-row-bg-color fl-node-5c406ea22a7b6 fl-row-bg-attachment-scroll" data-node="5c406ea22a7b6">
+<div class="fl-row-content-wrap">
+<div class="fl-row-content fl-row-fixed-width fl-node-content">
+<div class="fl-col-group fl-node-5c406ea22acec fl-col-group-equal-height fl-col-group-align-center fl-col-group-custom-width" data-node="5c406ea22acec">
+<div class="fl-col fl-node-5c406ea22ad32 fl-col-small" data-node="5c406ea22ad32">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-photo fl-node-5c406ea22ad74" data-node="5c406ea22ad74">
+<div class="fl-module-content fl-node-content">
+<div class="fl-photo fl-photo-align-center" itemscope itemtype="http://schema.org/ImageObject">
+<div class="fl-photo-content fl-photo-img-jpg">
+<img loading="lazy" class="fl-photo-img wp-image-1203 size-full vamtam-lazyload-noparent" src="https://vamtam.com/wp-content/uploads/2021/02/theme-estuidar-small.jpg" alt="theme-estuidar-small" itemprop="image" height="452" width="780" title="theme-estuidar-small" sizes="(max-width: 768px) 100vw, (min-width: 1280px) 640px,50vw" srcset="data:image/svg+xml;utf8,&lt;svg%20xmlns=&quot;http://www.w3.org/2000/svg&quot;%20viewBox=&quot;0%200%20780%20452&quot;%20height=&quot;452px&quot;%20width=&quot;780px&quot;/&gt;" data-srcset="https://vamtam.com/wp-content/uploads/2021/02/theme-estuidar-small.jpg 780w, https://vamtam.com/wp-content/uploads/2021/02/theme-estuidar-small-300x174.jpg 300w, https://vamtam.com/wp-content/uploads/2021/02/theme-estuidar-small-630x365.jpg 630w, https://vamtam.com/wp-content/uploads/2021/02/theme-estuidar-small-420x243.jpg 420w, https://vamtam.com/wp-content/uploads/2021/02/theme-estuidar-small-315x183.jpg 315w, https://vamtam.com/wp-content/uploads/2021/02/theme-estuidar-small-300x174@2x.jpg 600w" /> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-col fl-node-5c406ea22adb8 fl-col-small fl-col-has-cols" data-node="5c406ea22adb8">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-vamtam-heading fl-node-5c406ea22adfa" data-node="5c406ea22adfa">
+<div class="fl-module-content fl-node-content">
+<h1 class="vamtam-heading ">
+<span class="vamtam-heading-text">Estudiar</span>
+</h1>
+</div>
+</div>
+<div class="fl-module fl-module-vamtam-heading fl-node-5c406ea22ae3b" data-node="5c406ea22ae3b">
+<div class="fl-module-content fl-node-content">
+<h3 class="vamtam-heading ">
+<span class="vamtam-heading-text">Dedicated <br>Theme for your School,<br>College or University</br></span>
+</h3>
+</div>
+</div>
+<div class="fl-col-group fl-node-5c406ea22ae7c fl-col-group-nested fl-col-group-equal-height fl-col-group-align-center fl-col-group-custom-width" data-node="5c406ea22ae7c">
+<div class="fl-col fl-node-5c406ea22aebe fl-col-small" data-node="5c406ea22aebe">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-vamtam-button fl-node-5c406ea22af00" data-node="5c406ea22af00">
+<div class="fl-module-content fl-node-content">
+<div class="vamtam-button-wrap vamtam-button-width-auto" style="text-align:left">
+<a href="https://themes.vamtam.com/?theme=estudiar" target="_blank" class="vamtam-button accent6 hover-accent6 button-solid icon-animation-disable" role="button" style="font-size:16px;line-height:18px;padding:14px 28px;">
+<span class="vamtam-button-text">Demo</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-col fl-node-5c406ea22af45 fl-col-small" data-node="5c406ea22af45">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-vamtam-button fl-node-5c406ea22af86" data-node="5c406ea22af86">
+<div class="fl-module-content fl-node-content">
+<div class="vamtam-button-wrap vamtam-button-width-auto" style="text-align:left">
+<a href="https://1.envato.market/vamtam-estudiar" target="_blank" class="vamtam-button accent4 hover-accent6 button-border icon-animation-disable" role="button" style="font-size:16px;line-height:18px;padding:14px 28px;">
+<span class="vamtam-button-text">BUY - $79</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-col fl-node-5f0c87f53a45b fl-col-small" data-node="5f0c87f53a45b">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-photo fl-node-5f0c87f53a17f" data-node="5f0c87f53a17f">
+<div class="fl-module-content fl-node-content">
+<div class="fl-photo fl-photo-align-left" itemscope itemtype="http://schema.org/ImageObject">
+<div class="fl-photo-content fl-photo-img-png">
+<a href="https://elementor.com/pricing/?ref=13981" target="_blank" rel="noopener" itemprop="url" title="elementor-new-1">
+<img loading="lazy" class="fl-photo-img wp-image-1149 size-full vamtam-lazyload-noparent" src="https://vamtam.com/wp-content/uploads/2020/07/elementor-new-1.png" alt="elementor-new-1" itemprop="image" height="120" width="456" data-link-type="url" title="elementor-new-1" sizes="(max-width: 768px) 100vw, (min-width: 1280px) 294px,23vw" srcset="data:image/svg+xml;utf8,&lt;svg%20xmlns=&quot;http://www.w3.org/2000/svg&quot;%20viewBox=&quot;0%200%20456%20120&quot;%20height=&quot;120px&quot;%20width=&quot;456px&quot;/&gt;" data-srcset="https://vamtam.com/wp-content/uploads/2020/07/elementor-new-1.png 456w, https://vamtam.com/wp-content/uploads/2020/07/elementor-new-1-300x79.png 300w, https://vamtam.com/wp-content/uploads/2020/07/elementor-new-1-420x111.png 420w, https://vamtam.com/wp-content/uploads/2020/07/elementor-new-1-315x83.png 315w" /> </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-row fl-row-full-width fl-row-bg-color fl-node-603773c1ad05f fl-row-bg-attachment-scroll" data-node="603773c1ad05f">
+<div class="fl-row-content-wrap">
+<div class="fl-row-content fl-row-fixed-width fl-node-content">
+<div class="fl-col-group fl-node-603773c1ad6ff fl-col-group-equal-height fl-col-group-align-center fl-col-group-custom-width" data-node="603773c1ad6ff">
+<div class="fl-col fl-node-603773c1ad702 fl-col-small" data-node="603773c1ad702">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-photo fl-node-603773c1ad704" data-node="603773c1ad704">
+<div class="fl-module-content fl-node-content">
+<div class="fl-photo fl-photo-align-center" itemscope itemtype="http://schema.org/ImageObject">
+<div class="fl-photo-content fl-photo-img-jpg">
+<img loading="lazy" class="fl-photo-img wp-image-1195 size-full vamtam-lazyload-noparent" src="https://vamtam.com/wp-content/uploads/2021/01/theme-charity-small.jpg" alt="theme-charity-small" itemprop="image" height="452" width="780" title="theme-charity-small" sizes="(max-width: 768px) 100vw, (min-width: 1280px) 640px,50vw" srcset="data:image/svg+xml;utf8,&lt;svg%20xmlns=&quot;http://www.w3.org/2000/svg&quot;%20viewBox=&quot;0%200%20780%20452&quot;%20height=&quot;452px&quot;%20width=&quot;780px&quot;/&gt;" data-srcset="https://vamtam.com/wp-content/uploads/2021/01/theme-charity-small.jpg 780w, https://vamtam.com/wp-content/uploads/2021/01/theme-charity-small-300x174.jpg 300w, https://vamtam.com/wp-content/uploads/2021/01/theme-charity-small-768x445.jpg 768w, https://vamtam.com/wp-content/uploads/2021/01/theme-charity-small-630x365.jpg 630w, https://vamtam.com/wp-content/uploads/2021/01/theme-charity-small-420x243.jpg 420w, https://vamtam.com/wp-content/uploads/2021/01/theme-charity-small-315x183.jpg 315w" /> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-col fl-node-603773c1ad705 fl-col-small fl-col-has-cols" data-node="603773c1ad705">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-vamtam-heading fl-node-603773c1ad706" data-node="603773c1ad706">
+<div class="fl-module-content fl-node-content">
+<h1 class="vamtam-heading ">
+<span class="vamtam-heading-text">Caridad</span>
+</h1>
+</div>
+</div>
+<div class="fl-module fl-module-vamtam-heading fl-node-603773c1ad708" data-node="603773c1ad708">
+<div class="fl-module-content fl-node-content">
+<h3 class="vamtam-heading ">
+<span class="vamtam-heading-text">Dedicated <br>Theme for Charity and <br>Non-Profit Organizations</br></span>
+</h3>
+</div>
+</div>
+<div class="fl-col-group fl-node-603773c1ad709 fl-col-group-nested fl-col-group-equal-height fl-col-group-align-center fl-col-group-custom-width" data-node="603773c1ad709">
+<div class="fl-col fl-node-603773c1ad70a fl-col-small" data-node="603773c1ad70a">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-vamtam-button fl-node-603773c1ad70b" data-node="603773c1ad70b">
+<div class="fl-module-content fl-node-content">
+<div class="vamtam-button-wrap vamtam-button-width-auto" style="text-align:left">
+<a href="https://themes.vamtam.com/?theme=caridad" target="_blank" class="vamtam-button accent6 hover-accent6 button-solid icon-animation-disable" role="button" style="font-size:16px;line-height:18px;padding:14px 28px;">
+<span class="vamtam-button-text">Demo</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-col fl-node-603773c1ad70c fl-col-small" data-node="603773c1ad70c">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-vamtam-button fl-node-603773c1ad70e" data-node="603773c1ad70e">
+<div class="fl-module-content fl-node-content">
+<div class="vamtam-button-wrap vamtam-button-width-auto" style="text-align:left">
+<a href="https://1.envato.market/vamtam-caridad" target="_blank" class="vamtam-button accent6 hover-accent6 button-border icon-animation-disable" role="button" style="font-size:16px;line-height:18px;padding:14px 28px;">
+<span class="vamtam-button-text">BUY - $79</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-col fl-node-603773c1ad70f fl-col-small" data-node="603773c1ad70f">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-photo fl-node-603773c1ad710" data-node="603773c1ad710">
+<div class="fl-module-content fl-node-content">
+<div class="fl-photo fl-photo-align-left" itemscope itemtype="http://schema.org/ImageObject">
+<div class="fl-photo-content fl-photo-img-png">
+<a href="https://elementor.com/pricing/?ref=13981" target="_blank" rel="noopener" itemprop="url" title="elementor-new-1">
+<img loading="lazy" class="fl-photo-img wp-image-1149 size-full vamtam-lazyload-noparent" src="https://vamtam.com/wp-content/uploads/2020/07/elementor-new-1.png" alt="elementor-new-1" itemprop="image" height="120" width="456" data-link-type="url" title="elementor-new-1" sizes="(max-width: 768px) 100vw, (min-width: 1280px) 294px,23vw" srcset="data:image/svg+xml;utf8,&lt;svg%20xmlns=&quot;http://www.w3.org/2000/svg&quot;%20viewBox=&quot;0%200%20456%20120&quot;%20height=&quot;120px&quot;%20width=&quot;456px&quot;/&gt;" data-srcset="https://vamtam.com/wp-content/uploads/2020/07/elementor-new-1.png 456w, https://vamtam.com/wp-content/uploads/2020/07/elementor-new-1-300x79.png 300w, https://vamtam.com/wp-content/uploads/2020/07/elementor-new-1-420x111.png 420w, https://vamtam.com/wp-content/uploads/2020/07/elementor-new-1-315x83.png 315w" /> </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-row fl-row-full-width fl-row-bg-color fl-node-6006d3db1b325 fl-row-bg-attachment-scroll" data-node="6006d3db1b325">
+<div class="fl-row-content-wrap">
+<div class="fl-row-content fl-row-fixed-width fl-node-content">
+<div class="fl-col-group fl-node-6006d3db1b7e7 fl-col-group-equal-height fl-col-group-align-center fl-col-group-custom-width" data-node="6006d3db1b7e7">
+<div class="fl-col fl-node-6006d3db1b7e9 fl-col-small" data-node="6006d3db1b7e9">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-photo fl-node-6006d3db1b7eb" data-node="6006d3db1b7eb">
+<div class="fl-module-content fl-node-content">
+<div class="fl-photo fl-photo-align-center" itemscope itemtype="http://schema.org/ImageObject">
+<div class="fl-photo-content fl-photo-img-jpg">
+<img loading="lazy" class="fl-photo-img wp-image-1188 size-full vamtam-lazyload-noparent" src="https://vamtam.com/wp-content/uploads/2021/01/th-26026523521-724x419-1.jpg" alt="th-26026523521-724x419" itemprop="image" height="419" width="724" title="th-26026523521-724x419" sizes="(max-width: 768px) 100vw, (min-width: 1280px) 640px,50vw" srcset="data:image/svg+xml;utf8,&lt;svg%20xmlns=&quot;http://www.w3.org/2000/svg&quot;%20viewBox=&quot;0%200%20724%20419&quot;%20height=&quot;419px&quot;%20width=&quot;724px&quot;/&gt;" data-srcset="https://vamtam.com/wp-content/uploads/2021/01/th-26026523521-724x419-1.jpg 724w, https://vamtam.com/wp-content/uploads/2021/01/th-26026523521-724x419-1-300x174.jpg 300w, https://vamtam.com/wp-content/uploads/2021/01/th-26026523521-724x419-1-630x365.jpg 630w, https://vamtam.com/wp-content/uploads/2021/01/th-26026523521-724x419-1-420x243.jpg 420w, https://vamtam.com/wp-content/uploads/2021/01/th-26026523521-724x419-1-315x182.jpg 315w" /> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-col fl-node-6006d3db1b7ec fl-col-small fl-col-has-cols" data-node="6006d3db1b7ec">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-vamtam-heading fl-node-6006d3db1b7ed" data-node="6006d3db1b7ed">
+<div class="fl-module-content fl-node-content">
+<h1 class="vamtam-heading ">
+<span class="vamtam-heading-text">Bijoux</span>
+</h1>
+</div>
+</div>
+<div class="fl-module fl-module-vamtam-heading fl-node-6006d3db1b7ee" data-node="6006d3db1b7ee">
+<div class="fl-module-content fl-node-content">
+<h3 class="vamtam-heading ">
+<span class="vamtam-heading-text">Dedicated <br>Theme for Handmade Crafts <br>Jewelry Stores</br></span>
+</h3>
+</div>
+</div>
+<div class="fl-col-group fl-node-6006d3db1b7ef fl-col-group-nested fl-col-group-equal-height fl-col-group-align-center fl-col-group-custom-width" data-node="6006d3db1b7ef">
+<div class="fl-col fl-node-6006d3db1b7f0 fl-col-small" data-node="6006d3db1b7f0">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-vamtam-button fl-node-6006d3db1b7f1" data-node="6006d3db1b7f1">
+<div class="fl-module-content fl-node-content">
+<div class="vamtam-button-wrap vamtam-button-width-auto" style="text-align:left">
+<a href="https://themes.vamtam.com/?theme=bijoux" target="_blank" class="vamtam-button accent6 hover-accent6 button-solid icon-animation-disable" role="button" style="font-size:16px;line-height:18px;padding:14px 28px;">
+<span class="vamtam-button-text">Demo</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-col fl-node-6006d3db1b7f2 fl-col-small" data-node="6006d3db1b7f2">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-vamtam-button fl-node-6006d3db1b7f3" data-node="6006d3db1b7f3">
+<div class="fl-module-content fl-node-content">
+<div class="vamtam-button-wrap vamtam-button-width-auto" style="text-align:left">
+<a href="https://1.envato.market/vamtam-bijoux" target="_blank" class="vamtam-button accent6 hover-accent6 button-border icon-animation-disable" role="button" style="font-size:16px;line-height:18px;padding:14px 28px;">
+<span class="vamtam-button-text">BUY - $79</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-col fl-node-6006d3db1b7f4 fl-col-small" data-node="6006d3db1b7f4">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-photo fl-node-6006d3db1b7f5" data-node="6006d3db1b7f5">
+<div class="fl-module-content fl-node-content">
+<div class="fl-photo fl-photo-align-left" itemscope itemtype="http://schema.org/ImageObject">
+<div class="fl-photo-content fl-photo-img-png">
+<a href="https://elementor.com/pricing/?ref=13981" target="_blank" rel="noopener" itemprop="url" title="elementor-new-1">
+<img loading="lazy" class="fl-photo-img wp-image-1149 size-full vamtam-lazyload-noparent" src="https://vamtam.com/wp-content/uploads/2020/07/elementor-new-1.png" alt="elementor-new-1" itemprop="image" height="120" width="456" data-link-type="url" title="elementor-new-1" sizes="(max-width: 768px) 100vw, (min-width: 1280px) 294px,23vw" srcset="data:image/svg+xml;utf8,&lt;svg%20xmlns=&quot;http://www.w3.org/2000/svg&quot;%20viewBox=&quot;0%200%20456%20120&quot;%20height=&quot;120px&quot;%20width=&quot;456px&quot;/&gt;" data-srcset="https://vamtam.com/wp-content/uploads/2020/07/elementor-new-1.png 456w, https://vamtam.com/wp-content/uploads/2020/07/elementor-new-1-300x79.png 300w, https://vamtam.com/wp-content/uploads/2020/07/elementor-new-1-420x111.png 420w, https://vamtam.com/wp-content/uploads/2020/07/elementor-new-1-315x83.png 315w" /> </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-row fl-row-full-width fl-row-bg-color fl-node-5ffb7cebbb7ab fl-row-bg-attachment-scroll" data-node="5ffb7cebbb7ab">
+<div class="fl-row-content-wrap">
+<div class="fl-row-content fl-row-fixed-width fl-node-content">
+<div class="fl-col-group fl-node-5ffb7cebbbcd6 fl-col-group-equal-height fl-col-group-align-center fl-col-group-custom-width" data-node="5ffb7cebbbcd6">
+<div class="fl-col fl-node-5ffb7cebbbcd8 fl-col-small" data-node="5ffb7cebbbcd8">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-photo fl-node-5ffb7cebbbcda" data-node="5ffb7cebbbcda">
+<div class="fl-module-content fl-node-content">
+<div class="fl-photo fl-photo-align-center" itemscope itemtype="http://schema.org/ImageObject">
+<div class="fl-photo-content fl-photo-img-jpg">
+<img loading="lazy" class="fl-photo-img wp-image-1173 size-full vamtam-lazyload-noparent" src="https://vamtam.com/wp-content/uploads/2020/11/th-24624636420-700x405-1.jpg" alt="th-24624636420-700x405" itemprop="image" height="405" width="700" title="th-24624636420-700x405" sizes="(max-width: 768px) 100vw, (min-width: 1280px) 640px,50vw" srcset="data:image/svg+xml;utf8,&lt;svg%20xmlns=&quot;http://www.w3.org/2000/svg&quot;%20viewBox=&quot;0%200%20700%20405&quot;%20height=&quot;405px&quot;%20width=&quot;700px&quot;/&gt;" data-srcset="https://vamtam.com/wp-content/uploads/2020/11/th-24624636420-700x405-1.jpg 700w, https://vamtam.com/wp-content/uploads/2020/11/th-24624636420-700x405-1-300x174.jpg 300w, https://vamtam.com/wp-content/uploads/2020/11/th-24624636420-700x405-1-630x365.jpg 630w, https://vamtam.com/wp-content/uploads/2020/11/th-24624636420-700x405-1-420x243.jpg 420w, https://vamtam.com/wp-content/uploads/2020/11/th-24624636420-700x405-1-315x182.jpg 315w" /> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-col fl-node-5ffb7cebbbcdb fl-col-small fl-col-has-cols" data-node="5ffb7cebbbcdb">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-vamtam-heading fl-node-5ffb7cebbbcdc" data-node="5ffb7cebbbcdc">
+<div class="fl-module-content fl-node-content">
+<h1 class="vamtam-heading ">
+<span class="vamtam-heading-text">Lagar</span>
+</h1>
+</div>
+</div>
+<div class="fl-module fl-module-vamtam-heading fl-node-5ffb7cebbbcdd" data-node="5ffb7cebbbcdd">
+<div class="fl-module-content fl-node-content">
+<h3 class="vamtam-heading ">
+
+<span class="vamtam-heading-text">Dedicated <br>Theme for Wineries<br>Wine Stores</br></span>
+</h3>
+</div>
+</div>
+<div class="fl-col-group fl-node-5ffb7cebbbcde fl-col-group-nested fl-col-group-equal-height fl-col-group-align-center fl-col-group-custom-width" data-node="5ffb7cebbbcde">
+<div class="fl-col fl-node-5ffb7cebbbcdf fl-col-small" data-node="5ffb7cebbbcdf">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-vamtam-button fl-node-5ffb7cebbbce0" data-node="5ffb7cebbbce0">
+<div class="fl-module-content fl-node-content">
+<div class="vamtam-button-wrap vamtam-button-width-auto" style="text-align:left">
+<a href="https://themes.vamtam.com/?theme=lagar" target="_blank" class="vamtam-button accent6 hover-accent6 button-solid icon-animation-disable" role="button" style="font-size:16px;line-height:18px;padding:14px 28px;">
+<span class="vamtam-button-text">Demo</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-col fl-node-5ffb7cebbbce1 fl-col-small" data-node="5ffb7cebbbce1">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-vamtam-button fl-node-5ffb7cebbbce2" data-node="5ffb7cebbbce2">
+<div class="fl-module-content fl-node-content">
+<div class="vamtam-button-wrap vamtam-button-width-auto" style="text-align:left">
+<a href="https://1.envato.market/vamtam-lagar" target="_blank" class="vamtam-button accent6 hover-accent6 button-border icon-animation-disable" role="button" style="font-size:16px;line-height:18px;padding:14px 28px;">
+<span class="vamtam-button-text">BUY - $79</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-col fl-node-5ffb7cebbbce3 fl-col-small" data-node="5ffb7cebbbce3">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-photo fl-node-5ffb7cebbbce4" data-node="5ffb7cebbbce4">
+<div class="fl-module-content fl-node-content">
+<div class="fl-photo fl-photo-align-left" itemscope itemtype="http://schema.org/ImageObject">
+<div class="fl-photo-content fl-photo-img-png">
+<a href="https://elementor.com/pricing/?ref=13981" target="_blank" rel="noopener" itemprop="url" title="elementor-new-1">
+<img loading="lazy" class="fl-photo-img wp-image-1149 size-full vamtam-lazyload-noparent" src="https://vamtam.com/wp-content/uploads/2020/07/elementor-new-1.png" alt="elementor-new-1" itemprop="image" height="120" width="456" data-link-type="url" title="elementor-new-1" sizes="(max-width: 768px) 100vw, (min-width: 1280px) 294px,23vw" srcset="data:image/svg+xml;utf8,&lt;svg%20xmlns=&quot;http://www.w3.org/2000/svg&quot;%20viewBox=&quot;0%200%20456%20120&quot;%20height=&quot;120px&quot;%20width=&quot;456px&quot;/&gt;" data-srcset="https://vamtam.com/wp-content/uploads/2020/07/elementor-new-1.png 456w, https://vamtam.com/wp-content/uploads/2020/07/elementor-new-1-300x79.png 300w, https://vamtam.com/wp-content/uploads/2020/07/elementor-new-1-420x111.png 420w, https://vamtam.com/wp-content/uploads/2020/07/elementor-new-1-315x83.png 315w" /> </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-row fl-row-full-width fl-row-bg-color fl-node-5faeeda40a326 fl-row-bg-attachment-scroll" data-node="5faeeda40a326">
+<div class="fl-row-content-wrap">
+<div class="fl-row-content fl-row-fixed-width fl-node-content">
+<div class="fl-col-group fl-node-5faeeda40a6f1 fl-col-group-equal-height fl-col-group-align-center fl-col-group-custom-width" data-node="5faeeda40a6f1">
+<div class="fl-col fl-node-5faeeda40a6f2 fl-col-small" data-node="5faeeda40a6f2">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-photo fl-node-5faeeda40a6f3" data-node="5faeeda40a6f3">
+<div class="fl-module-content fl-node-content">
+<div class="fl-photo fl-photo-align-center" itemscope itemtype="http://schema.org/ImageObject">
+<div class="fl-photo-content fl-photo-img-jpeg">
+<img loading="lazy" class="fl-photo-img wp-image-1136 size-full vamtam-lazyload-noparent" src="https://vamtam.com/wp-content/uploads/2020/07/salute-e1594634633756.jpeg" data-srcset="https://vamtam.com/wp-content/uploads/2020/07/salute-e1594634633756.jpeg" srcset="data:image/svg+xml;utf8,&lt;svg%20xmlns=&quot;http://www.w3.org/2000/svg&quot;%20viewBox=&quot;0%200%20724%20419&quot;%20height=&quot;419px&quot;%20width=&quot;724px&quot;/&gt;" alt="salute" itemprop="image" height="419" width="724" title="salute" sizes="(max-width: 768px) 100vw, (min-width: 1280px) 640px,50vw" /> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-col fl-node-5faeeda40a6f4 fl-col-small fl-col-has-cols" data-node="5faeeda40a6f4">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-vamtam-heading fl-node-5faeeda40a6f5" data-node="5faeeda40a6f5">
+<div class="fl-module-content fl-node-content">
+<h1 class="vamtam-heading ">
+<span class="vamtam-heading-text">Salute</span>
+</h1>
+</div>
+</div>
+<div class="fl-module fl-module-vamtam-heading fl-node-5faeeda40a6f6" data-node="5faeeda40a6f6">
+<div class="fl-module-content fl-node-content">
+<h3 class="vamtam-heading ">
+<span class="vamtam-heading-text">Dedicated <br>Theme for Medical Related<br>Practices</br></span>
+</h3>
+</div>
+</div>
+<div class="fl-col-group fl-node-5faeeda40a6f7 fl-col-group-nested fl-col-group-equal-height fl-col-group-align-center fl-col-group-custom-width" data-node="5faeeda40a6f7">
+<div class="fl-col fl-node-5faeeda40a6f8 fl-col-small" data-node="5faeeda40a6f8">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-vamtam-button fl-node-5faeeda40a6f9" data-node="5faeeda40a6f9">
+<div class="fl-module-content fl-node-content">
+<div class="vamtam-button-wrap vamtam-button-width-auto" style="text-align:left">
+<a href="https://themes.vamtam.com/?theme=salute" target="_blank" class="vamtam-button accent6 hover-accent6 button-solid icon-animation-disable" role="button" style="font-size:16px;line-height:18px;padding:14px 28px;">
+<span class="vamtam-button-text">Demo</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-col fl-node-5faeeda40a6fa fl-col-small" data-node="5faeeda40a6fa">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-vamtam-button fl-node-5faeeda40a6fb" data-node="5faeeda40a6fb">
+<div class="fl-module-content fl-node-content">
+<div class="vamtam-button-wrap vamtam-button-width-auto" style="text-align:left">
+<a href="https://1.envato.market/vamtamsalute" target="_blank" class="vamtam-button accent6 hover-accent6 button-border icon-animation-disable" role="button" style="font-size:16px;line-height:18px;padding:14px 28px;">
+<span class="vamtam-button-text">BUY - $79</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-col fl-node-5faeeda40a6fc fl-col-small" data-node="5faeeda40a6fc">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-photo fl-node-5faeeda40a6fd" data-node="5faeeda40a6fd">
+<div class="fl-module-content fl-node-content">
+<div class="fl-photo fl-photo-align-left" itemscope itemtype="http://schema.org/ImageObject">
+<div class="fl-photo-content fl-photo-img-png">
+<a href="https://elementor.com/pricing/?ref=13981" target="_blank" rel="noopener" itemprop="url" title="elementor-new-1">
+<img loading="lazy" class="fl-photo-img wp-image-1149 size-full vamtam-lazyload-noparent" src="https://vamtam.com/wp-content/uploads/2020/07/elementor-new-1.png" alt="elementor-new-1" itemprop="image" height="120" width="456" data-link-type="url" title="elementor-new-1" sizes="(max-width: 768px) 100vw, (min-width: 1280px) 294px,23vw" srcset="data:image/svg+xml;utf8,&lt;svg%20xmlns=&quot;http://www.w3.org/2000/svg&quot;%20viewBox=&quot;0%200%20456%20120&quot;%20height=&quot;120px&quot;%20width=&quot;456px&quot;/&gt;" data-srcset="https://vamtam.com/wp-content/uploads/2020/07/elementor-new-1.png 456w, https://vamtam.com/wp-content/uploads/2020/07/elementor-new-1-300x79.png 300w, https://vamtam.com/wp-content/uploads/2020/07/elementor-new-1-420x111.png 420w, https://vamtam.com/wp-content/uploads/2020/07/elementor-new-1-315x83.png 315w" /> </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-row fl-row-full-width fl-row-bg-color fl-node-5f0b350e9eb36 fl-row-bg-attachment-scroll" data-node="5f0b350e9eb36">
+<div class="fl-row-content-wrap">
+<div class="fl-row-content fl-row-fixed-width fl-node-content">
+<div class="fl-col-group fl-node-5f0b350e9ef3d fl-col-group-equal-height fl-col-group-align-center fl-col-group-custom-width" data-node="5f0b350e9ef3d">
+<div class="fl-col fl-node-5f0b350e9ef7a fl-col-small" data-node="5f0b350e9ef7a">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-photo fl-node-5f0b350e9efb5" data-node="5f0b350e9efb5">
+<div class="fl-module-content fl-node-content">
+<div class="fl-photo fl-photo-align-center" itemscope itemtype="http://schema.org/ImageObject">
+<div class="fl-photo-content fl-photo-img-jpg">
+<img loading="lazy" class="fl-photo-img wp-image-1115 size-full vamtam-lazyload-noparent" src="https://vamtam.com/wp-content/uploads/2020/06/theme-skole-e1591124479100.jpg" data-srcset="https://vamtam.com/wp-content/uploads/2020/06/theme-skole-e1591124479100.jpg" srcset="data:image/svg+xml;utf8,&lt;svg%20xmlns=&quot;http://www.w3.org/2000/svg&quot;%20viewBox=&quot;0%200%20724%20419&quot;%20height=&quot;419px&quot;%20width=&quot;724px&quot;/&gt;" alt="theme-skole" itemprop="image" height="419" width="724" title="theme-skole" sizes="(max-width: 768px) 100vw, (min-width: 1280px) 640px,50vw" /> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-col fl-node-5f0b350e9eff0 fl-col-small fl-col-has-cols" data-node="5f0b350e9eff0">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-vamtam-heading fl-node-5f0b350e9f028" data-node="5f0b350e9f028">
+<div class="fl-module-content fl-node-content">
+<h1 class="vamtam-heading ">
+<span class="vamtam-heading-text">Skole</span>
+</h1>
+</div>
+</div>
+<div class="fl-module fl-module-vamtam-heading fl-node-5f0b350e9f060" data-node="5f0b350e9f060">
+<div class="fl-module-content fl-node-content">
+<h3 class="vamtam-heading ">
+<span class="vamtam-heading-text">Dedicated <br>Theme for Language Schools<br>and Courses</br></span>
+</h3>
+</div>
+</div>
+<div class="fl-col-group fl-node-5f0b350e9f098 fl-col-group-nested fl-col-group-equal-height fl-col-group-align-center fl-col-group-custom-width" data-node="5f0b350e9f098">
+<div class="fl-col fl-node-5f0b350e9f0b9 fl-col-small" data-node="5f0b350e9f0b9">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-vamtam-button fl-node-5f0b350e9f0f1" data-node="5f0b350e9f0f1">
+<div class="fl-module-content fl-node-content">
+<div class="vamtam-button-wrap vamtam-button-width-auto" style="text-align:left">
+<a href="https://themes.vamtam.com/?theme=skole" target="_blank" class="vamtam-button accent6 hover-accent6 button-solid icon-animation-disable" role="button" style="font-size:16px;line-height:18px;padding:14px 28px;">
+<span class="vamtam-button-text">Demo</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-col fl-node-5f0b350e9f12a fl-col-small" data-node="5f0b350e9f12a">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-vamtam-button fl-node-5f0b350e9f161" data-node="5f0b350e9f161">
+<div class="fl-module-content fl-node-content">
+<div class="vamtam-button-wrap vamtam-button-width-auto" style="text-align:left">
+<a href="https://1.envato.market/skole-preschool" target="_blank" class="vamtam-button accent6 hover-accent6 button-border icon-animation-disable" role="button" style="font-size:16px;line-height:18px;padding:14px 28px;">
+<span class="vamtam-button-text">BUY - $79</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-col fl-node-5f0c88b156e6a fl-col-small" data-node="5f0c88b156e6a">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-photo fl-node-5f0c88abd5ee6" data-node="5f0c88abd5ee6">
+<div class="fl-module-content fl-node-content">
+<div class="fl-photo fl-photo-align-left" itemscope itemtype="http://schema.org/ImageObject">
+<div class="fl-photo-content fl-photo-img-png">
+<a href="https://elementor.com/pricing/?ref=13981" target="_blank" rel="noopener" itemprop="url" title="elementor-new-1">
+<img loading="lazy" class="fl-photo-img wp-image-1149 size-full vamtam-lazyload-noparent" src="https://vamtam.com/wp-content/uploads/2020/07/elementor-new-1.png" alt="elementor-new-1" itemprop="image" height="120" width="456" data-link-type="url" title="elementor-new-1" sizes="(max-width: 768px) 100vw, (min-width: 1280px) 294px,23vw" srcset="data:image/svg+xml;utf8,&lt;svg%20xmlns=&quot;http://www.w3.org/2000/svg&quot;%20viewBox=&quot;0%200%20456%20120&quot;%20height=&quot;120px&quot;%20width=&quot;456px&quot;/&gt;" data-srcset="https://vamtam.com/wp-content/uploads/2020/07/elementor-new-1.png 456w, https://vamtam.com/wp-content/uploads/2020/07/elementor-new-1-300x79.png 300w, https://vamtam.com/wp-content/uploads/2020/07/elementor-new-1-420x111.png 420w, https://vamtam.com/wp-content/uploads/2020/07/elementor-new-1-315x83.png 315w" /> </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-row fl-row-full-width fl-row-bg-color fl-node-5ed6ad5744a72 fl-row-bg-attachment-scroll" data-node="5ed6ad5744a72">
+<div class="fl-row-content-wrap">
+<div class="fl-row-content fl-row-fixed-width fl-node-content">
+<div class="fl-col-group fl-node-5ed6ad5744dde fl-col-group-equal-height fl-col-group-align-center fl-col-group-custom-width" data-node="5ed6ad5744dde">
+<div class="fl-col fl-node-5ed6ad5744e19 fl-col-small" data-node="5ed6ad5744e19">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-photo fl-node-5ed6ad5744e52" data-node="5ed6ad5744e52">
+<div class="fl-module-content fl-node-content">
+<div class="fl-photo fl-photo-align-center" itemscope itemtype="http://schema.org/ImageObject">
+<div class="fl-photo-content fl-photo-img-jpg">
+<img loading="lazy" class="fl-photo-img wp-image-1101 size-full vamtam-lazyload-noparent" src="https://vamtam.com/wp-content/uploads/2020/05/th-21007703074-724x419-1.jpg" alt="th-21007703074-724x419" itemprop="image" height="419" width="724" title="th-21007703074-724x419" sizes="(max-width: 768px) 100vw, (min-width: 1280px) 640px,50vw" srcset="data:image/svg+xml;utf8,&lt;svg%20xmlns=&quot;http://www.w3.org/2000/svg&quot;%20viewBox=&quot;0%200%20724%20419&quot;%20height=&quot;419px&quot;%20width=&quot;724px&quot;/&gt;" data-srcset="https://vamtam.com/wp-content/uploads/2020/05/th-21007703074-724x419-1.jpg 724w, https://vamtam.com/wp-content/uploads/2020/05/th-21007703074-724x419-1-300x174.jpg 300w, https://vamtam.com/wp-content/uploads/2020/05/th-21007703074-724x419-1-630x365.jpg 630w, https://vamtam.com/wp-content/uploads/2020/05/th-21007703074-724x419-1-420x243.jpg 420w, https://vamtam.com/wp-content/uploads/2020/05/th-21007703074-724x419-1-315x182.jpg 315w" /> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-col fl-node-5ed6ad5744e8a fl-col-small fl-col-has-cols" data-node="5ed6ad5744e8a">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-vamtam-heading fl-node-5ed6ad5744ec2" data-node="5ed6ad5744ec2">
+<div class="fl-module-content fl-node-content">
+<h1 class="vamtam-heading ">
+<span class="vamtam-heading-text">Scuola</span>
+</h1>
+</div>
+</div>
+<div class="fl-module fl-module-vamtam-heading fl-node-5ed6ad5744efa" data-node="5ed6ad5744efa">
+<div class="fl-module-content fl-node-content">
+<h3 class="vamtam-heading ">
+<span class="vamtam-heading-text">Dedicated <br>Theme for Language Schools<br>and Courses</br></span>
+</h3>
+</div>
+</div>
+<div class="fl-col-group fl-node-5ed6ad5744f23 fl-col-group-nested fl-col-group-equal-height fl-col-group-align-center fl-col-group-custom-width" data-node="5ed6ad5744f23">
+<div class="fl-col fl-node-5ed6ad5744f5b fl-col-small" data-node="5ed6ad5744f5b">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-vamtam-button fl-node-5ed6ad5744f93" data-node="5ed6ad5744f93">
+<div class="fl-module-content fl-node-content">
+<div class="vamtam-button-wrap vamtam-button-width-auto" style="text-align:left">
+<a href="https://themes.vamtam.com/?theme=scuola" target="_blank" class="vamtam-button accent6 hover-accent6 button-solid icon-animation-disable" role="button" style="font-size:16px;line-height:18px;padding:14px 28px;">
+<span class="vamtam-button-text">Demo</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-col fl-node-5ed6ad5744fcb fl-col-small" data-node="5ed6ad5744fcb">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-vamtam-button fl-node-5f987eac76ce3" data-node="5f987eac76ce3">
+<div class="fl-module-content fl-node-content">
+<div class="vamtam-button-wrap vamtam-button-width-auto" style="text-align:left">
+<a href="https://1.envato.market/scuola" target="_blank" class="vamtam-button accent6 hover-accent6 button-border icon-animation-disable" role="button" style="font-size:16px;line-height:18px;padding:14px 28px;">
+<span class="vamtam-button-text">BUY - $79</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-col fl-node-5f0c88bee0e0b fl-col-small" data-node="5f0c88bee0e0b">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-photo fl-node-5f0c88b6b16bb" data-node="5f0c88b6b16bb">
+<div class="fl-module-content fl-node-content">
+<div class="fl-photo fl-photo-align-left" itemscope itemtype="http://schema.org/ImageObject">
+<div class="fl-photo-content fl-photo-img-png">
+<a href="https://elementor.com/pricing/?ref=13981" target="_blank" rel="noopener" itemprop="url" title="elementor-new-1">
+<img loading="lazy" class="fl-photo-img wp-image-1149 size-full vamtam-lazyload-noparent" src="https://vamtam.com/wp-content/uploads/2020/07/elementor-new-1.png" alt="elementor-new-1" itemprop="image" height="120" width="456" data-link-type="url" title="elementor-new-1" sizes="(max-width: 768px) 100vw, (min-width: 1280px) 294px,23vw" srcset="data:image/svg+xml;utf8,&lt;svg%20xmlns=&quot;http://www.w3.org/2000/svg&quot;%20viewBox=&quot;0%200%20456%20120&quot;%20height=&quot;120px&quot;%20width=&quot;456px&quot;/&gt;" data-srcset="https://vamtam.com/wp-content/uploads/2020/07/elementor-new-1.png 456w, https://vamtam.com/wp-content/uploads/2020/07/elementor-new-1-300x79.png 300w, https://vamtam.com/wp-content/uploads/2020/07/elementor-new-1-420x111.png 420w, https://vamtam.com/wp-content/uploads/2020/07/elementor-new-1-315x83.png 315w" /> </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-row fl-row-full-width fl-row-bg-color fl-node-5ec57cd83abd9 fl-row-bg-attachment-scroll" data-node="5ec57cd83abd9">
+<div class="fl-row-content-wrap">
+<div class="fl-row-content fl-row-fixed-width fl-node-content">
+<div class="fl-col-group fl-node-5ec57cd83b247 fl-col-group-equal-height fl-col-group-align-center fl-col-group-custom-width" data-node="5ec57cd83b247">
+<div class="fl-col fl-node-5ec57cd83b294 fl-col-small" data-node="5ec57cd83b294">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-photo fl-node-5ec57cd83b2d5" data-node="5ec57cd83b2d5">
+<div class="fl-module-content fl-node-content">
+<div class="fl-photo fl-photo-align-center" itemscope itemtype="http://schema.org/ImageObject">
+<div class="fl-photo-content fl-photo-img-jpg">
+<img loading="lazy" class="fl-photo-img wp-image-1082 size-full vamtam-lazyload-noparent" src="https://vamtam.com/wp-content/uploads/2020/01/theme-gast.jpg" alt="theme-gast" itemprop="image" height="419" width="724" title="theme-gast" sizes="(max-width: 768px) 100vw, (min-width: 1280px) 640px,50vw" srcset="data:image/svg+xml;utf8,&lt;svg%20xmlns=&quot;http://www.w3.org/2000/svg&quot;%20viewBox=&quot;0%200%20724%20419&quot;%20height=&quot;419px&quot;%20width=&quot;724px&quot;/&gt;" data-srcset="https://vamtam.com/wp-content/uploads/2020/01/theme-gast.jpg 724w, https://vamtam.com/wp-content/uploads/2020/01/theme-gast-300x174.jpg 300w, https://vamtam.com/wp-content/uploads/2020/01/theme-gast-630x365.jpg 630w, https://vamtam.com/wp-content/uploads/2020/01/theme-gast-420x243.jpg 420w, https://vamtam.com/wp-content/uploads/2020/01/theme-gast-315x182.jpg 315w" /> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-col fl-node-5ec57cd83b313 fl-col-small fl-col-has-cols" data-node="5ec57cd83b313">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-vamtam-heading fl-node-5ec57cd83b350" data-node="5ec57cd83b350">
+<div class="fl-module-content fl-node-content">
+<h1 class="vamtam-heading ">
+<span class="vamtam-heading-text">Gast</span>
+</h1>
+</div>
+</div>
+<div class="fl-module fl-module-vamtam-heading fl-node-5ec57cd83b38e" data-node="5ec57cd83b38e">
+<div class="fl-module-content fl-node-content">
+<h3 class="vamtam-heading ">
+<span class="vamtam-heading-text">Dedicated <br>Theme for Hotel and <br>Vacation Rentals</br></span>
+</h3>
+</div>
+</div>
+<div class="fl-col-group fl-node-5ec57cd83b3d3 fl-col-group-nested fl-col-group-equal-height fl-col-group-align-center fl-col-group-custom-width" data-node="5ec57cd83b3d3">
+<div class="fl-col fl-node-5ec57cd83b412 fl-col-small" data-node="5ec57cd83b412">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-vamtam-button fl-node-5ec57cd83b44f" data-node="5ec57cd83b44f">
+<div class="fl-module-content fl-node-content">
+<div class="vamtam-button-wrap vamtam-button-width-auto" style="text-align:left">
+<a href="https://themes.vamtam.com/?theme=gast" target="_blank" class="vamtam-button accent6 hover-accent6 button-solid icon-animation-disable" role="button" style="font-size:16px;line-height:18px;padding:14px 28px;">
+<span class="vamtam-button-text">Demo</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-col fl-node-5ec57cd83b48d" data-node="5ec57cd83b48d">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-vamtam-button fl-node-5ec57cd83b4ca" data-node="5ec57cd83b4ca">
+<div class="fl-module-content fl-node-content">
+<div class="vamtam-button-wrap vamtam-button-width-auto" style="text-align:left">
+<a href="https://1.envato.market/gast" target="_blank" class="vamtam-button accent6 hover-accent6 button-border icon-animation-disable" role="button" style="font-size:16px;line-height:18px;padding:14px 28px;">
+<span class="vamtam-button-text">BUY - $79</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-row fl-row-full-width fl-row-bg-color fl-node-5e0cb4bc9a707 fl-row-bg-attachment-scroll" data-node="5e0cb4bc9a707">
+<div class="fl-row-content-wrap">
+<div class="fl-row-content fl-row-fixed-width fl-node-content">
+<div class="fl-col-group fl-node-5e0cb4bc9ac10 fl-col-group-equal-height fl-col-group-align-center fl-col-group-custom-width" data-node="5e0cb4bc9ac10">
+<div class="fl-col fl-node-5e0cb4bc9ac51 fl-col-small" data-node="5e0cb4bc9ac51">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-photo fl-node-5e0cb4bc9ac8e" data-node="5e0cb4bc9ac8e">
+<div class="fl-module-content fl-node-content">
+<div class="fl-photo fl-photo-align-center" itemscope itemtype="http://schema.org/ImageObject">
+<div class="fl-photo-content fl-photo-img-jpg">
+<img loading="lazy" class="fl-photo-img wp-image-1061 size-full vamtam-lazyload-noparent" src="https://vamtam.com/wp-content/uploads/2019/06/lap-top-byra.jpg" alt="lap-top-byra" itemprop="image" height="419" width="724" title="lap-top-byra" sizes="(max-width: 768px) 100vw, (min-width: 1280px) 640px,50vw" srcset="data:image/svg+xml;utf8,&lt;svg%20xmlns=&quot;http://www.w3.org/2000/svg&quot;%20viewBox=&quot;0%200%20724%20419&quot;%20height=&quot;419px&quot;%20width=&quot;724px&quot;/&gt;" data-srcset="https://vamtam.com/wp-content/uploads/2019/06/lap-top-byra.jpg 724w, https://vamtam.com/wp-content/uploads/2019/06/lap-top-byra-300x174.jpg 300w, https://vamtam.com/wp-content/uploads/2019/06/lap-top-byra-630x365.jpg 630w, https://vamtam.com/wp-content/uploads/2019/06/lap-top-byra-420x243.jpg 420w, https://vamtam.com/wp-content/uploads/2019/06/lap-top-byra-315x182.jpg 315w" /> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-col fl-node-5e0cb4bc9accc fl-col-small fl-col-has-cols" data-node="5e0cb4bc9accc">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-vamtam-heading fl-node-5e0cb4bc9ad0b" data-node="5e0cb4bc9ad0b">
+<div class="fl-module-content fl-node-content">
+<h1 class="vamtam-heading ">
+<span class="vamtam-heading-text">Byra</span>
+</h1>
+</div>
+</div>
+<div class="fl-module fl-module-vamtam-heading fl-node-5e0cb4bc9ad49" data-node="5e0cb4bc9ad49">
+<div class="fl-module-content fl-node-content">
+<h3 class="vamtam-heading ">
+<span class="vamtam-heading-text">Dedicated <br>Theme for Digital and <br>Creative Agencies</br></span>
+</h3>
+</div>
+</div>
+<div class="fl-col-group fl-node-5e0cb4bc9ad86 fl-col-group-nested fl-col-group-equal-height fl-col-group-align-center fl-col-group-custom-width" data-node="5e0cb4bc9ad86">
+<div class="fl-col fl-node-5e0cb4bc9adc3 fl-col-small" data-node="5e0cb4bc9adc3">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-vamtam-button fl-node-5e0cb4bc9ae01" data-node="5e0cb4bc9ae01">
+<div class="fl-module-content fl-node-content">
+<div class="vamtam-button-wrap vamtam-button-width-auto" style="text-align:left">
+<a href="https://themes.vamtam.com/?theme=byra" target="_blank" class="vamtam-button accent6 hover-accent6 button-solid icon-animation-disable" role="button" style="font-size:16px;line-height:18px;padding:14px 28px;">
+<span class="vamtam-button-text">Demo</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-col fl-node-5e0cb4bc9ae3f" data-node="5e0cb4bc9ae3f">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-vamtam-button fl-node-5e0cb4bc9ae7c" data-node="5e0cb4bc9ae7c">
+<div class="fl-module-content fl-node-content">
+<div class="vamtam-button-wrap vamtam-button-width-auto" style="text-align:left">
+<a href="https://1.envato.market/byra" target="_blank" class="vamtam-button accent6 hover-accent6 button-border icon-animation-disable" role="button" style="font-size:16px;line-height:18px;padding:14px 28px;">
+<span class="vamtam-button-text">BUY - $79</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-row fl-row-full-width fl-row-bg-color fl-node-5d0e1b27a6145 fl-row-bg-attachment-scroll" data-node="5d0e1b27a6145">
+<div class="fl-row-content-wrap">
+<div class="fl-row-content fl-row-fixed-width fl-node-content">
+<div class="fl-col-group fl-node-5d0e1b27a652f fl-col-group-equal-height fl-col-group-align-center fl-col-group-custom-width" data-node="5d0e1b27a652f">
+<div class="fl-col fl-node-5d0e1b27a656d fl-col-small" data-node="5d0e1b27a656d">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-photo fl-node-5d0e1b27a65aa" data-node="5d0e1b27a65aa">
+<div class="fl-module-content fl-node-content">
+<div class="fl-photo fl-photo-align-center" itemscope itemtype="http://schema.org/ImageObject">
+<div class="fl-photo-content fl-photo-img-jpg">
+<img loading="lazy" class="fl-photo-img wp-image-1027 size-full vamtam-lazyload-noparent" src="https://vamtam.com/wp-content/uploads/2019/01/theme-komo.jpg" alt="theme-komo" itemprop="image" height="419" width="724" title="theme-komo" sizes="(max-width: 768px) 100vw, (min-width: 1280px) 640px,50vw" srcset="data:image/svg+xml;utf8,&lt;svg%20xmlns=&quot;http://www.w3.org/2000/svg&quot;%20viewBox=&quot;0%200%20724%20419&quot;%20height=&quot;419px&quot;%20width=&quot;724px&quot;/&gt;" data-srcset="https://vamtam.com/wp-content/uploads/2019/01/theme-komo.jpg 724w, https://vamtam.com/wp-content/uploads/2019/01/theme-komo-300x174.jpg 300w, https://vamtam.com/wp-content/uploads/2019/01/theme-komo-615x356.jpg 615w, https://vamtam.com/wp-content/uploads/2019/01/theme-komo-400x231.jpg 400w, https://vamtam.com/wp-content/uploads/2019/01/theme-komo-292x169.jpg 292w, https://vamtam.com/wp-content/uploads/2019/01/theme-komo-585x339.jpg 585w" /> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-col fl-node-5d0e1b27a65e7 fl-col-small fl-col-has-cols" data-node="5d0e1b27a65e7">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-vamtam-heading fl-node-5d0e1b27a6623" data-node="5d0e1b27a6623">
+<div class="fl-module-content fl-node-content">
+<h1 class="vamtam-heading ">
+<span class="vamtam-heading-text">Komo</span>
+</h1>
+</div>
+</div>
+<div class="fl-module fl-module-vamtam-heading fl-node-5d0e1b27a6660" data-node="5d0e1b27a6660">
+<div class="fl-module-content fl-node-content">
+<h3 class="vamtam-heading ">
+<span class="vamtam-heading-text">Dedicated <br>Theme for Rentals &amp; Tours<br>Bike Shop</br></span>
+</h3>
+</div>
+</div>
+<div class="fl-col-group fl-node-5d0e1b27a669c fl-col-group-nested fl-col-group-equal-height fl-col-group-align-center fl-col-group-custom-width" data-node="5d0e1b27a669c">
+<div class="fl-col fl-node-5d0e1b27a66d9 fl-col-small" data-node="5d0e1b27a66d9">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-vamtam-button fl-node-5d0e1b27a6715" data-node="5d0e1b27a6715">
+<div class="fl-module-content fl-node-content">
+<div class="vamtam-button-wrap vamtam-button-width-auto" style="text-align:left">
+<a href="https://themes.vamtam.com/?theme=komo" target="_blank" class="vamtam-button accent6 hover-accent6 button-solid icon-animation-disable" role="button" style="font-size:16px;line-height:18px;padding:14px 28px;">
+<span class="vamtam-button-text">Demo</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-col fl-node-5d0e1b27a675a" data-node="5d0e1b27a675a">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-vamtam-button fl-node-5d0e1b27a6797" data-node="5d0e1b27a6797">
+<div class="fl-module-content fl-node-content">
+<div class="vamtam-button-wrap vamtam-button-width-auto" style="text-align:left">
+<a href="https://1.envato.market/komo" target="_blank" class="vamtam-button accent6 hover-accent6 button-border icon-animation-disable" role="button" style="font-size:16px;line-height:18px;padding:14px 28px;">
+<span class="vamtam-button-text">BUY - $79</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-row fl-row-full-width fl-row-bg-color fl-node-5c4068699c7e3 fl-row-bg-attachment-scroll" data-node="5c4068699c7e3">
+<div class="fl-row-content-wrap">
+<div class="fl-row-content fl-row-fixed-width fl-node-content">
+<div class="fl-col-group fl-node-5c4068699cd96 fl-col-group-equal-height fl-col-group-align-center fl-col-group-custom-width" data-node="5c4068699cd96">
+<div class="fl-col fl-node-5c4068699cf23 fl-col-small" data-node="5c4068699cf23">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-photo fl-node-5c4068699cf70" data-node="5c4068699cf70">
+<div class="fl-module-content fl-node-content">
+<div class="fl-photo fl-photo-align-center" itemscope itemtype="http://schema.org/ImageObject">
+<div class="fl-photo-content fl-photo-img-jpg">
+<img loading="lazy" class="fl-photo-img wp-image-1019 size-full vamtam-lazyload-noparent" src="https://vamtam.com/wp-content/uploads/2019/01/theme-clany.jpg" alt="theme-clany" itemprop="image" height="419" width="724" title="theme-clany" sizes="(max-width: 768px) 100vw, (min-width: 1280px) 640px,50vw" srcset="data:image/svg+xml;utf8,&lt;svg%20xmlns=&quot;http://www.w3.org/2000/svg&quot;%20viewBox=&quot;0%200%20724%20419&quot;%20height=&quot;419px&quot;%20width=&quot;724px&quot;/&gt;" data-srcset="https://vamtam.com/wp-content/uploads/2019/01/theme-clany.jpg 724w, https://vamtam.com/wp-content/uploads/2019/01/theme-clany-300x174.jpg 300w, https://vamtam.com/wp-content/uploads/2019/01/theme-clany-615x356.jpg 615w, https://vamtam.com/wp-content/uploads/2019/01/theme-clany-400x231.jpg 400w, https://vamtam.com/wp-content/uploads/2019/01/theme-clany-292x169.jpg 292w, https://vamtam.com/wp-content/uploads/2019/01/theme-clany-585x339.jpg 585w" /> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-col fl-node-5c4068699cfbb fl-col-small fl-col-has-cols" data-node="5c4068699cfbb">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-vamtam-heading fl-node-5c4068699d002" data-node="5c4068699d002">
+<div class="fl-module-content fl-node-content">
+<h1 class="vamtam-heading ">
+<span class="vamtam-heading-text">Clany</span>
+</h1>
+</div>
+</div>
+<div class="fl-module fl-module-vamtam-heading fl-node-5c4068699d0c2" data-node="5c4068699d0c2">
+<div class="fl-module-content fl-node-content">
+<h3 class="vamtam-heading ">
+<span class="vamtam-heading-text">Dedicated Theme <br>for companies operating in the <br>Cleaning Services Sector</br></span>
+</h3>
+</div>
+</div>
+<div class="fl-col-group fl-node-5c4068699d10b fl-col-group-nested fl-col-group-equal-height fl-col-group-align-center fl-col-group-custom-width" data-node="5c4068699d10b">
+<div class="fl-col fl-node-5c4068699d154 fl-col-small" data-node="5c4068699d154">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-vamtam-button fl-node-5c4068699d19a" data-node="5c4068699d19a">
+<div class="fl-module-content fl-node-content">
+<div class="vamtam-button-wrap vamtam-button-width-auto" style="text-align:left">
+<a href="https://themes.vamtam.com/?theme=clany" target="_blank" class="vamtam-button accent6 hover-accent6 button-solid icon-animation-disable" role="button" style="font-size:16px;line-height:18px;padding:14px 28px;">
+<span class="vamtam-button-text">Demo</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-col fl-node-5c4068699d1df" data-node="5c4068699d1df">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-vamtam-button fl-node-5c4068699d223" data-node="5c4068699d223">
+<div class="fl-module-content fl-node-content">
+<div class="vamtam-button-wrap vamtam-button-width-auto" style="text-align:left">
+<a href="https://1.envato.market/clany" target="_blank" class="vamtam-button accent6 hover-accent6 button-border icon-animation-disable" role="button" style="font-size:16px;line-height:18px;padding:14px 28px;">
+<span class="vamtam-button-text">BUY - $79</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-row fl-row-full-width fl-row-bg-color fl-node-5ba3738b6156d fl-row-bg-attachment-scroll" data-node="5ba3738b6156d">
+<div class="fl-row-content-wrap">
+<div class="fl-row-content fl-row-fixed-width fl-node-content">
+<div class="fl-col-group fl-node-5ba3738b62023 fl-col-group-equal-height fl-col-group-align-center fl-col-group-custom-width" data-node="5ba3738b62023">
+<div class="fl-col fl-node-5ba3738b62061 fl-col-small" data-node="5ba3738b62061">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-photo fl-node-5ba3738b6209b" data-node="5ba3738b6209b">
+<div class="fl-module-content fl-node-content">
+<div class="fl-photo fl-photo-align-center" itemscope itemtype="http://schema.org/ImageObject">
+<div class="fl-photo-content fl-photo-img-jpg">
+<img loading="lazy" class="fl-photo-img wp-image-1008 size-full vamtam-lazyload-noparent" src="https://vamtam.com/wp-content/uploads/2018/11/theme-mann.jpg" alt="theme-mann" itemprop="image" height="419" width="724" title="theme-mann" sizes="(max-width: 768px) 100vw, (min-width: 1280px) 640px,50vw" srcset="data:image/svg+xml;utf8,&lt;svg%20xmlns=&quot;http://www.w3.org/2000/svg&quot;%20viewBox=&quot;0%200%20724%20419&quot;%20height=&quot;419px&quot;%20width=&quot;724px&quot;/&gt;" data-srcset="https://vamtam.com/wp-content/uploads/2018/11/theme-mann.jpg 724w, https://vamtam.com/wp-content/uploads/2018/11/theme-mann-300x174.jpg 300w, https://vamtam.com/wp-content/uploads/2018/11/theme-mann-615x356.jpg 615w, https://vamtam.com/wp-content/uploads/2018/11/theme-mann-400x231.jpg 400w, https://vamtam.com/wp-content/uploads/2018/11/theme-mann-292x169.jpg 292w, https://vamtam.com/wp-content/uploads/2018/11/theme-mann-585x339.jpg 585w" /> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-col fl-node-5ba3738b620dd fl-col-small fl-col-has-cols" data-node="5ba3738b620dd">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-vamtam-heading fl-node-5ba3738b62118" data-node="5ba3738b62118">
+<div class="fl-module-content fl-node-content">
+<h1 class="vamtam-heading ">
+<span class="vamtam-heading-text">Mann</span>
+</h1>
+</div>
+</div>
+<div class="fl-module fl-module-vamtam-heading fl-node-5ba3738b62152" data-node="5ba3738b62152">
+<div class="fl-module-content fl-node-content">
+<h3 class="vamtam-heading ">
+<span class="vamtam-heading-text">Dedicated <br>Theme for Conferences, Events<br>Webinars, Seminars</br></span>
+</h3>
+</div>
+</div>
+<div class="fl-col-group fl-node-5ba3738b6218c fl-col-group-nested fl-col-group-equal-height fl-col-group-align-center fl-col-group-custom-width" data-node="5ba3738b6218c">
+<div class="fl-col fl-node-5ba3738b621c6 fl-col-small" data-node="5ba3738b621c6">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-vamtam-button fl-node-5ba3738b62201" data-node="5ba3738b62201">
+<div class="fl-module-content fl-node-content">
+<div class="vamtam-button-wrap vamtam-button-width-auto" style="text-align:left">
+<a href="https://themes.vamtam.com/?theme=mann" target="_blank" class="vamtam-button accent6 hover-accent6 button-solid icon-animation-disable" role="button" style="font-size:16px;line-height:18px;padding:14px 28px;">
+<span class="vamtam-button-text">Demo</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-col fl-node-5ba3738b6223c" data-node="5ba3738b6223c">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-vamtam-button fl-node-5ba3738b62276" data-node="5ba3738b62276">
+<div class="fl-module-content fl-node-content">
+<div class="vamtam-button-wrap vamtam-button-width-auto" style="text-align:left">
+<a href="https://1.envato.market/mann" target="_blank" class="vamtam-button accent6 hover-accent6 button-border icon-animation-disable" role="button" style="font-size:16px;line-height:18px;padding:14px 28px;">
+<span class="vamtam-button-text">BUY - $79</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-row fl-row-full-width fl-row-bg-color fl-node-5be480a45ada0 fl-row-bg-attachment-scroll" data-node="5be480a45ada0">
+<div class="fl-row-content-wrap">
+<div class="fl-row-content fl-row-fixed-width fl-node-content">
+<div class="fl-col-group fl-node-5be480a45b1aa fl-col-group-equal-height fl-col-group-align-center fl-col-group-custom-width" data-node="5be480a45b1aa">
+<div class="fl-col fl-node-5be480a45b1ee fl-col-small" data-node="5be480a45b1ee">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-photo fl-node-5be480a45b22e" data-node="5be480a45b22e">
+<div class="fl-module-content fl-node-content">
+<div class="fl-photo fl-photo-align-center" itemscope itemtype="http://schema.org/ImageObject">
+<div class="fl-photo-content fl-photo-img-jpg">
+<img loading="lazy" class="fl-photo-img wp-image-999 size-full vamtam-lazyload-noparent" src="https://vamtam.com/wp-content/uploads/2018/09/theme-mozo.jpg" alt="theme-mozo" itemprop="image" height="419" width="724" title="theme-mozo" sizes="(max-width: 768px) 100vw, (min-width: 1280px) 640px,50vw" srcset="data:image/svg+xml;utf8,&lt;svg%20xmlns=&quot;http://www.w3.org/2000/svg&quot;%20viewBox=&quot;0%200%20724%20419&quot;%20height=&quot;419px&quot;%20width=&quot;724px&quot;/&gt;" data-srcset="https://vamtam.com/wp-content/uploads/2018/09/theme-mozo.jpg 724w, https://vamtam.com/wp-content/uploads/2018/09/theme-mozo-300x174.jpg 300w, https://vamtam.com/wp-content/uploads/2018/09/theme-mozo-615x356.jpg 615w, https://vamtam.com/wp-content/uploads/2018/09/theme-mozo-400x231.jpg 400w, https://vamtam.com/wp-content/uploads/2018/09/theme-mozo-292x169.jpg 292w, https://vamtam.com/wp-content/uploads/2018/09/theme-mozo-585x339.jpg 585w" /> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-col fl-node-5be480a45b26a fl-col-small fl-col-has-cols" data-node="5be480a45b26a">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-vamtam-heading fl-node-5be480a45b2a4" data-node="5be480a45b2a4">
+<div class="fl-module-content fl-node-content">
+<h1 class="vamtam-heading ">
+<span class="vamtam-heading-text">Mozo</span>
+</h1>
+</div>
+</div>
+<div class="fl-module fl-module-vamtam-heading fl-node-5be480a45b2df" data-node="5be480a45b2df">
+<div class="fl-module-content fl-node-content">
+<h3 class="vamtam-heading ">
+<span class="vamtam-heading-text">Dedicated <br>Theme for the anyone working<br>in the Music Industry</br></span>
+</h3>
+</div>
+</div>
+<div class="fl-col-group fl-node-5be480a45b31a fl-col-group-nested fl-col-group-equal-height fl-col-group-align-center fl-col-group-custom-width" data-node="5be480a45b31a">
+<div class="fl-col fl-node-5be480a45b355 fl-col-small" data-node="5be480a45b355">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-vamtam-button fl-node-5be480a45b38f" data-node="5be480a45b38f">
+<div class="fl-module-content fl-node-content">
+<div class="vamtam-button-wrap vamtam-button-width-auto" style="text-align:left">
+<a href="https://themes.vamtam.com/?theme=mozo" target="_blank" class="vamtam-button accent6 hover-accent6 button-solid icon-animation-disable" role="button" style="font-size:16px;line-height:18px;padding:14px 28px;">
+<span class="vamtam-button-text">Demo</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-col fl-node-5be480a45b3ca" data-node="5be480a45b3ca">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-vamtam-button fl-node-5be480a45b405" data-node="5be480a45b405">
+<div class="fl-module-content fl-node-content">
+<div class="vamtam-button-wrap vamtam-button-width-auto" style="text-align:left">
+<a href="https://1.envato.market/mozo" target="_blank" class="vamtam-button accent6 hover-accent6 button-border icon-animation-disable" role="button" style="font-size:16px;line-height:18px;padding:14px 28px;">
+<span class="vamtam-button-text">BUY - $79</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-row fl-row-full-width fl-row-bg-color fl-node-5ba3738b7fb20 fl-row-bg-attachment-scroll" data-node="5ba3738b7fb20">
+<div class="fl-row-content-wrap">
+<div class="fl-row-content fl-row-fixed-width fl-node-content">
+<div class="fl-col-group fl-node-5ba3738b801a0 fl-col-group-equal-height fl-col-group-align-center fl-col-group-custom-width" data-node="5ba3738b801a0">
+<div class="fl-col fl-node-5ba3738b801e6 fl-col-small" data-node="5ba3738b801e6">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-photo fl-node-5ba3738b8022b" data-node="5ba3738b8022b">
+<div class="fl-module-content fl-node-content">
+<div class="fl-photo fl-photo-align-center" itemscope itemtype="http://schema.org/ImageObject">
+<div class="fl-photo-content fl-photo-img-jpg">
+<img loading="lazy" class="fl-photo-img wp-image-923 size-full vamtam-lazyload-noparent" src="https://vamtam.com/wp-content/uploads/2018/04/theme-alisandjoseph.jpg" alt="theme-alisandjoseph" itemprop="image" height="419" width="724" title="theme-alisandjoseph" sizes="(max-width: 768px) 100vw, (min-width: 1280px) 640px,50vw" srcset="data:image/svg+xml;utf8,&lt;svg%20xmlns=&quot;http://www.w3.org/2000/svg&quot;%20viewBox=&quot;0%200%20724%20419&quot;%20height=&quot;419px&quot;%20width=&quot;724px&quot;/&gt;" data-srcset="https://vamtam.com/wp-content/uploads/2018/04/theme-alisandjoseph.jpg 724w, https://vamtam.com/wp-content/uploads/2018/04/theme-alisandjoseph-300x174.jpg 300w, https://vamtam.com/wp-content/uploads/2018/04/theme-alisandjoseph-615x356.jpg 615w, https://vamtam.com/wp-content/uploads/2018/04/theme-alisandjoseph-400x231.jpg 400w, https://vamtam.com/wp-content/uploads/2018/04/theme-alisandjoseph-292x169.jpg 292w, https://vamtam.com/wp-content/uploads/2018/04/theme-alisandjoseph-585x339.jpg 585w" /> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-col fl-node-5ba3738b8026e fl-col-small fl-col-has-cols" data-node="5ba3738b8026e">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-vamtam-heading fl-node-5ba3738b802b2" data-node="5ba3738b802b2">
+<div class="fl-module-content fl-node-content">
+<h1 class="vamtam-heading ">
+<span class="vamtam-heading-text">Alis</span>
+</h1>
+</div>
+</div>
+<div class="fl-module fl-module-vamtam-heading fl-node-5ba3738b802f6" data-node="5ba3738b802f6">
+<div class="fl-module-content fl-node-content">
+<h3 class="vamtam-heading ">
+<span class="vamtam-heading-text">Dedicated <br>Theme for the Wedding<br>and Wedding Planner Businesses</br></span>
+</h3>
+</div>
+</div>
+<div class="fl-col-group fl-node-5ba3738b80339 fl-col-group-nested fl-col-group-equal-height fl-col-group-align-center fl-col-group-custom-width" data-node="5ba3738b80339">
+<div class="fl-col fl-node-5ba3738b8037d fl-col-small" data-node="5ba3738b8037d">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-vamtam-button fl-node-5ba3738b803c1" data-node="5ba3738b803c1">
+<div class="fl-module-content fl-node-content">
+<div class="vamtam-button-wrap vamtam-button-width-auto" style="text-align:left">
+<a href="https://themes.vamtam.com/?theme=alis" target="_blank" class="vamtam-button accent6 hover-accent6 button-solid icon-animation-disable" role="button" style="font-size:16px;line-height:18px;padding:14px 28px;">
+<span class="vamtam-button-text">Demo</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-col fl-node-5ba3738b80405" data-node="5ba3738b80405">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-vamtam-button fl-node-5ba3738b80448" data-node="5ba3738b80448">
+<div class="fl-module-content fl-node-content">
+<div class="vamtam-button-wrap vamtam-button-width-auto" style="text-align:left">
+<a href="https://1.envato.market/alis" target="_blank" class="vamtam-button accent6 hover-accent6 button-border icon-animation-disable" role="button" style="font-size:16px;line-height:18px;padding:14px 28px;">
+<span class="vamtam-button-text">BUY - $79</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-row fl-row-full-width fl-row-bg-color fl-node-5adf8fb9e6a31 fl-row-bg-attachment-scroll" data-node="5adf8fb9e6a31">
+<div class="fl-row-content-wrap">
+<div class="fl-row-content fl-row-fixed-width fl-node-content">
+<div class="fl-col-group fl-node-5adf8fb9e70e2 fl-col-group-equal-height fl-col-group-align-center fl-col-group-custom-width" data-node="5adf8fb9e70e2">
+<div class="fl-col fl-node-5adf8fb9e7128 fl-col-small" data-node="5adf8fb9e7128">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-photo fl-node-5adf8fb9e7169" data-node="5adf8fb9e7169">
+<div class="fl-module-content fl-node-content">
+<div class="fl-photo fl-photo-align-center" itemscope itemtype="http://schema.org/ImageObject">
+<div class="fl-photo-content fl-photo-img-jpg">
+<img loading="lazy" class="fl-photo-img wp-image-906 size-full vamtam-lazyload-noparent" src="https://vamtam.com/wp-content/uploads/2018/04/theme-morz-vamtam.jpg" alt="theme-morz-vamtam" itemprop="image" height="419" width="724" title="theme-morz-vamtam" sizes="(max-width: 768px) 100vw, (min-width: 1280px) 640px,50vw" srcset="data:image/svg+xml;utf8,&lt;svg%20xmlns=&quot;http://www.w3.org/2000/svg&quot;%20viewBox=&quot;0%200%20724%20419&quot;%20height=&quot;419px&quot;%20width=&quot;724px&quot;/&gt;" data-srcset="https://vamtam.com/wp-content/uploads/2018/04/theme-morz-vamtam.jpg 724w, https://vamtam.com/wp-content/uploads/2018/04/theme-morz-vamtam-300x174.jpg 300w, https://vamtam.com/wp-content/uploads/2018/04/theme-morz-vamtam-615x356.jpg 615w, https://vamtam.com/wp-content/uploads/2018/04/theme-morz-vamtam-400x231.jpg 400w, https://vamtam.com/wp-content/uploads/2018/04/theme-morz-vamtam-292x169.jpg 292w, https://vamtam.com/wp-content/uploads/2018/04/theme-morz-vamtam-585x339.jpg 585w" /> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-col fl-node-5adf8fb9e71af fl-col-small fl-col-has-cols" data-node="5adf8fb9e71af">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-vamtam-heading fl-node-5adf8fb9e71ef" data-node="5adf8fb9e71ef">
+<div class="fl-module-content fl-node-content">
+<h1 class="vamtam-heading ">
+<span class="vamtam-heading-text">Morz</span>
+</h1>
+</div>
+</div>
+<div class="fl-module fl-module-vamtam-heading fl-node-5adf8fb9e722e" data-node="5adf8fb9e722e">
+<div class="fl-module-content fl-node-content">
+<h3 class="vamtam-heading ">
+<span class="vamtam-heading-text">Dedicated <br>Theme for the Transport, Cargo <br> and Logistics Sector</br></span>
+</h3>
+</div>
+</div>
+<div class="fl-col-group fl-node-5adf8fb9e726e fl-col-group-nested fl-col-group-equal-height fl-col-group-align-center fl-col-group-custom-width" data-node="5adf8fb9e726e">
+<div class="fl-col fl-node-5adf8fb9e72ad fl-col-small" data-node="5adf8fb9e72ad">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-vamtam-button fl-node-5adf8fb9e72ee" data-node="5adf8fb9e72ee">
+<div class="fl-module-content fl-node-content">
+<div class="vamtam-button-wrap vamtam-button-width-auto" style="text-align:left">
+<a href="https://themes.vamtam.com/?theme=morz" target="_blank" class="vamtam-button accent6 hover-accent6 button-solid icon-animation-disable" role="button" style="font-size:16px;line-height:18px;padding:14px 28px;">
+<span class="vamtam-button-text">Demo</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-col fl-node-5adf8fb9e732e" data-node="5adf8fb9e732e">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-vamtam-button fl-node-5adf8fb9e736c" data-node="5adf8fb9e736c">
+<div class="fl-module-content fl-node-content">
+<div class="vamtam-button-wrap vamtam-button-width-auto" style="text-align:left">
+<a href="https://1.envato.market/morz" target="_blank" class="vamtam-button accent6 hover-accent6 button-border icon-animation-disable" role="button" style="font-size:16px;line-height:18px;padding:14px 28px;">
+<span class="vamtam-button-text">BUY - $79</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-row fl-row-full-width fl-row-bg-color fl-node-5ad89cf4d0692 fl-row-bg-attachment-scroll" data-node="5ad89cf4d0692">
+<div class="fl-row-content-wrap">
+<div class="fl-row-content fl-row-fixed-width fl-node-content">
+<div class="fl-col-group fl-node-5ad89cf4d0986 fl-col-group-equal-height fl-col-group-align-center fl-col-group-custom-width" data-node="5ad89cf4d0986">
+<div class="fl-col fl-node-5ad89cf4d09c0 fl-col-small" data-node="5ad89cf4d09c0">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-photo fl-node-5ad89cf4d09f8" data-node="5ad89cf4d09f8">
+<div class="fl-module-content fl-node-content">
+<div class="fl-photo fl-photo-align-center" itemscope itemtype="http://schema.org/ImageObject">
+<div class="fl-photo-content fl-photo-img-jpg">
+<img loading="lazy" class="fl-photo-img wp-image-846 size-full vamtam-lazyload-noparent" src="https://vamtam.com/wp-content/uploads/2018/04/theme-pur-preview.jpg" alt="theme-pur-preview" itemprop="image" height="419" width="724" title="theme-pur-preview" sizes="(max-width: 768px) 100vw, (min-width: 1280px) 640px,50vw" srcset="data:image/svg+xml;utf8,&lt;svg%20xmlns=&quot;http://www.w3.org/2000/svg&quot;%20viewBox=&quot;0%200%20724%20419&quot;%20height=&quot;419px&quot;%20width=&quot;724px&quot;/&gt;" data-srcset="https://vamtam.com/wp-content/uploads/2018/04/theme-pur-preview.jpg 724w, https://vamtam.com/wp-content/uploads/2018/04/theme-pur-preview-300x174.jpg 300w, https://vamtam.com/wp-content/uploads/2018/04/theme-pur-preview-615x356.jpg 615w, https://vamtam.com/wp-content/uploads/2018/04/theme-pur-preview-400x231.jpg 400w, https://vamtam.com/wp-content/uploads/2018/04/theme-pur-preview-292x169.jpg 292w, https://vamtam.com/wp-content/uploads/2018/04/theme-pur-preview-585x339.jpg 585w" /> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-col fl-node-5ad89cf4d0a30 fl-col-small fl-col-has-cols" data-node="5ad89cf4d0a30">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-vamtam-heading fl-node-5ad89cf4d0a6c" data-node="5ad89cf4d0a6c">
+<div class="fl-module-content fl-node-content">
+<h1 class="vamtam-heading ">
+<span class="vamtam-heading-text">Pur</span>
+</h1>
+</div>
+</div>
+<div class="fl-module fl-module-vamtam-heading fl-node-5ad89cf4d0aa3" data-node="5ad89cf4d0aa3">
+<div class="fl-module-content fl-node-content">
+<h3 class="vamtam-heading ">
+<span class="vamtam-heading-text">Dedicated <br>Theme for the Spa, Massage <br> and Wellness Industry</br></span>
+</h3>
+</div>
+</div>
+<div class="fl-col-group fl-node-5ad89cf4d0adc fl-col-group-nested fl-col-group-equal-height fl-col-group-align-center fl-col-group-custom-width" data-node="5ad89cf4d0adc">
+<div class="fl-col fl-node-5ad89cf4d0b18 fl-col-small" data-node="5ad89cf4d0b18">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-vamtam-button fl-node-5ad89cf4d0b51" data-node="5ad89cf4d0b51">
+<div class="fl-module-content fl-node-content">
+<div class="vamtam-button-wrap vamtam-button-width-auto" style="text-align:left">
+<a href="https://themes.vamtam.com/?theme=pur" target="_blank" class="vamtam-button accent6 hover-accent6 button-solid icon-animation-disable" role="button" style="font-size:16px;line-height:18px;padding:14px 28px;">
+<span class="vamtam-button-text">Demo</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-col fl-node-5ad89cf4d0b8a" data-node="5ad89cf4d0b8a">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-vamtam-button fl-node-5ad89cf4d0bc1" data-node="5ad89cf4d0bc1">
+<div class="fl-module-content fl-node-content">
+<div class="vamtam-button-wrap vamtam-button-width-auto" style="text-align:left">
+<a href="https://1.envato.market/pur" target="_blank" class="vamtam-button accent6 hover-accent6 button-border icon-animation-disable" role="button" style="font-size:16px;line-height:18px;padding:14px 28px;">
+<span class="vamtam-button-text">BUY - $79</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-row fl-row-full-width fl-row-bg-color fl-node-5ad89d53b469e fl-row-bg-attachment-scroll" data-node="5ad89d53b469e">
+<div class="fl-row-content-wrap">
+<div class="fl-row-content fl-row-fixed-width fl-node-content">
+<div class="fl-col-group fl-node-5ad89d53b49ce fl-col-group-equal-height fl-col-group-align-center fl-col-group-custom-width" data-node="5ad89d53b49ce">
+<div class="fl-col fl-node-5ad89d53b4a0c fl-col-small" data-node="5ad89d53b4a0c">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-photo fl-node-5ad89d53b4a44" data-node="5ad89d53b4a44">
+<div class="fl-module-content fl-node-content">
+<div class="fl-photo fl-photo-align-center" itemscope itemtype="http://schema.org/ImageObject">
+<div class="fl-photo-content fl-photo-img-jpg">
+<img loading="lazy" class="fl-photo-img wp-image-843 size-full vamtam-lazyload-noparent" src="https://vamtam.com/wp-content/uploads/2018/04/theme-industrial-vamtam-light.jpg" alt="theme-industrial-vamtam-light" itemprop="image" height="419" width="724" title="theme-industrial-vamtam-light" sizes="(max-width: 768px) 100vw, (min-width: 1280px) 640px,50vw" srcset="data:image/svg+xml;utf8,&lt;svg%20xmlns=&quot;http://www.w3.org/2000/svg&quot;%20viewBox=&quot;0%200%20724%20419&quot;%20height=&quot;419px&quot;%20width=&quot;724px&quot;/&gt;" data-srcset="https://vamtam.com/wp-content/uploads/2018/04/theme-industrial-vamtam-light.jpg 724w, https://vamtam.com/wp-content/uploads/2018/04/theme-industrial-vamtam-light-300x174.jpg 300w, https://vamtam.com/wp-content/uploads/2018/04/theme-industrial-vamtam-light-615x356.jpg 615w, https://vamtam.com/wp-content/uploads/2018/04/theme-industrial-vamtam-light-400x231.jpg 400w, https://vamtam.com/wp-content/uploads/2018/04/theme-industrial-vamtam-light-292x169.jpg 292w, https://vamtam.com/wp-content/uploads/2018/04/theme-industrial-vamtam-light-585x339.jpg 585w" /> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-col fl-node-5ad89d53b4a7d fl-col-small fl-col-has-cols" data-node="5ad89d53b4a7d">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-vamtam-heading fl-node-5ad89d53b4ab4" data-node="5ad89d53b4ab4">
+<div class="fl-module-content fl-node-content">
+<h1 class="vamtam-heading ">
+<span class="vamtam-heading-text">Nex</span>
+</h1>
+</div>
+</div>
+<div class="fl-module fl-module-vamtam-heading fl-node-5ad89d53b4aec" data-node="5ad89d53b4aec">
+<div class="fl-module-content fl-node-content">
+<h3 class="vamtam-heading ">
+<span class="vamtam-heading-text">Dedicated <br>Theme for the Factory and <br> Industrial Sector</br></span>
+</h3>
+</div>
+</div>
+<div class="fl-col-group fl-node-5ad89d53b4b24 fl-col-group-nested fl-col-group-equal-height fl-col-group-align-center fl-col-group-custom-width" data-node="5ad89d53b4b24">
+<div class="fl-col fl-node-5ad89d53b4b84 fl-col-small" data-node="5ad89d53b4b84">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-vamtam-button fl-node-5ad89d53b4bbd" data-node="5ad89d53b4bbd">
+<div class="fl-module-content fl-node-content">
+<div class="vamtam-button-wrap vamtam-button-width-auto" style="text-align:left">
+<a href="https://themes.vamtam.com/?theme=nex" target="_blank" class="vamtam-button accent6 hover-accent6 button-solid icon-animation-disable" role="button" style="font-size:16px;line-height:18px;padding:14px 28px;">
+<span class="vamtam-button-text">Demo</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-col fl-node-5ad89d53b4bf7" data-node="5ad89d53b4bf7">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-vamtam-button fl-node-5ad89d53b4c33" data-node="5ad89d53b4c33">
+<div class="fl-module-content fl-node-content">
+<div class="vamtam-button-wrap vamtam-button-width-auto" style="text-align:left">
+<a href="https://1.envato.market/nex" target="_blank" class="vamtam-button accent6 hover-accent6 button-border icon-animation-disable" role="button" style="font-size:16px;line-height:18px;padding:14px 28px;">
+<span class="vamtam-button-text">BUY - $79</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-row fl-row-full-width fl-row-bg-color fl-node-5ad8a1746654f fl-row-bg-attachment-scroll" data-node="5ad8a1746654f">
+<div class="fl-row-content-wrap">
+<div class="fl-row-content fl-row-fixed-width fl-node-content">
+<div class="fl-col-group fl-node-5ad8a17477297" data-node="5ad8a17477297">
+<div class="fl-col fl-node-5ad8a174773dc" data-node="5ad8a174773dc">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-vamtam-button fl-node-5ad8a1b435d3f" data-node="5ad8a1b435d3f">
+<div class="fl-module-content fl-node-content">
+<div class="vamtam-button-wrap vamtam-button-width-auto" style="text-align:center">
+<a href="https://vamtam.com/themes/" target="_self" class="vamtam-button accent1 hover-accent1 button-border icon-animation-disable" role="button" style="font-size:14px;line-height:16px;padding:17px 34px;">
+<span class="vamtam-button-text">View all themes</span>
+</a>
+</div>
+</div>
+</div>
+<div class="fl-module fl-module-rich-text fl-node-5ad8a222bf3c3" data-node="5ad8a222bf3c3">
+<div class="fl-module-content fl-node-content">
+<div class="fl-rich-text">
+<div class="row ">
+<div id="wpv-column-ee7e78cdac7fb33fc9307d3e47b34054" class="wpv-grid grid-1-1 wpv-first-level first has-background extended no-extended-padding">
+<div class="limit-wrapper">
+<div class="extended-column-inner">
+<div class="row ">
+<div id="wpv-column-94bceff124b8c58d8a252db56f587c3c" class="wpv-grid grid-1-1 first unextended no-extended-padding">
+<p class="accent-7" style="text-align: center;">Themes for Restaurants, Hair Salons, Church, Construction, Medical, Lawyer, Auto – Repair, Fitness, Wedding and related services sites…</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-row fl-row-full-width fl-row-bg-none fl-node-5ad8a29925076 fl-row-bg-attachment-scroll" data-node="5ad8a29925076">
+<div class="fl-row-content-wrap">
+<div class="fl-row-content fl-row-fixed-width fl-node-content">
+<div class="fl-col-group fl-node-5ad8a2993a0e1" data-node="5ad8a2993a0e1">
+<div class="fl-col fl-node-5ad8a2993a2bb" data-node="5ad8a2993a2bb">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-vamtam-heading fl-node-5ad8b9d4599fd" data-node="5ad8b9d4599fd">
+<div class="fl-module-content fl-node-content">
+<h2 class="vamtam-heading ">
+<span class="vamtam-heading-text">Testimonials</span>
+</h2>
+</div>
+</div>
+<div class="fl-module fl-module-vamtam-testimonials fl-node-5ad8b9b3d9858 vamtam-testimonials-slider" data-node="5ad8b9b3d9858">
+<div class="fl-module-content fl-node-content">
+<div class="vamtam-cubeportfolio cbp cbp-slider-edge vamtam-testimonials-slider vamtam-tst-align-center" data-options="{&quot;layoutMode&quot;:&quot;slider&quot;,&quot;drag&quot;:true,&quot;auto&quot;:false,&quot;autoTimeout&quot;:5000,&quot;autoPauseOnHover&quot;:true,&quot;showNavigation&quot;:false,&quot;showPagination&quot;:true,&quot;rewindNav&quot;:true,&quot;scrollByPage&quot;:false,&quot;gridAdjustment&quot;:&quot;responsive&quot;,&quot;mediaQueries&quot;:[{&quot;width&quot;:1,&quot;cols&quot;:1}],&quot;gapHorizontal&quot;:0,&quot;gapVertical&quot;:0,&quot;caption&quot;:&quot;&quot;,&quot;displayType&quot;:&quot;default&quot;}"><div class="cbp-item">
+<blockquote class="clearfix small simple alignment-center post-946 jetpack-testimonial type-jetpack-testimonial status-publish hentry">
+<div class='quote-text'>
+<div class="quote-title-wrapper clearfix">
+<div class='quote-title'><span class='the-title'>severinan</span></div> </div>
+<div class="quote-content">
+<p>It is a great theme and the customer support is excellent! I can't recommend this template enough - it is sleek, modern and flexible. Props to Nikolay and Vera, they are really putting a lot of effort into this.</p>
+</div>
+</div>
+</blockquote>
+</div><div class="cbp-item">
+<blockquote class="clearfix small simple alignment-center post-945 jetpack-testimonial type-jetpack-testimonial status-publish hentry">
+<div class='quote-text'>
+<div class="quote-title-wrapper clearfix">
+<div class='quote-title'><span class='the-title'>InsightCreativos</span></div> </div>
+<div class="quote-content">
+<p> Well, I jhave worked with more than 100 themes already in wordpress, but I think this ones is really good, and also all my problems fixed with the great customer support, thank You very much! Javier.</p>
+</div>
+</div>
+</blockquote>
+</div><div class="cbp-item">
+<blockquote class="clearfix small simple alignment-center post-944 jetpack-testimonial type-jetpack-testimonial status-publish hentry">
+<div class='quote-text'>
+
+<div class="quote-title-wrapper clearfix">
+<div class='quote-title'><span class='the-title'>businesswdesign</span></div> </div>
+<div class="quote-content">
+<p>Just wanted to leave my feedback about this A-MA-ZING theme! First of all, this theme – let me say this TEAM are one of the best on Themeforest. I’ve been now more then 5+ years on Themeforest and have downloaded over 50+ templates from different authors. Why is that? This team design templates at highest price, extremely advanced and customizable template options, very fast loading pages, one of the best responsive experience that I have. But this team offer also a great support including the template price as services, they are quick to reply and very friendly. I am so enthusiast about the team, so I bought more templates from them because I am sure that everything on that is AWESOME. Because of their template design I have many idea’s to build which I am working on it now. I wish they also provide customized offer. Thx for all, S.</p>
+</div>
+</div>
+</blockquote>
+</div><div class="cbp-item">
+<blockquote class="clearfix small simple alignment-center post-943 jetpack-testimonial type-jetpack-testimonial status-publish hentry">
+<div class='quote-text'>
+<div class="quote-title-wrapper clearfix">
+<div class='quote-title'><span class='the-title'>jackieadams777</span></div> </div>
+<div class="quote-content">
+<p>We love this theme for it's sleek, elegant and intuitive design and the extensive features and options it our website. Definitely sets the bar for law firm websites!!</p>
+</div>
+</div>
+</blockquote>
+</div><div class="cbp-item">
+<blockquote class="clearfix small simple alignment-center post-942 jetpack-testimonial type-jetpack-testimonial status-publish hentry">
+<div class='quote-text'>
+<div class="quote-title-wrapper clearfix">
+<div class='quote-title'><span class='the-title'>jasksks</span></div> </div>
+<div class="quote-content">
+<p>This theme is great for fitness sites, well designed and an easy drag and drop builder. The demo import will take some time to wrap your head around for those unfamiliar with CSS, but the helpful and prompt support team more than makes up for that tiny moot point. I highly recommend this theme for not just the design, but also the top notch support provided by Vantam!</p>
+</div>
+</div>
+</blockquote>
+</div><div class="cbp-item">
+<blockquote class="clearfix small simple alignment-center post-941 jetpack-testimonial type-jetpack-testimonial status-publish hentry">
+<div class='quote-text'>
+<div class="quote-title-wrapper clearfix">
+<div class='quote-title'><span class='the-title'>Khairos</span></div> </div>
+<div class="quote-content">
+<p>A Great support with fast answers and very clear. This template is very beautiful and i have seen the team is improving it little by little. Has a lot of potential!!</p>
+</div>
+</div>
+</blockquote>
+</div><div class="cbp-item">
+<blockquote class="clearfix small simple alignment-center post-940 jetpack-testimonial type-jetpack-testimonial status-publish hentry">
+<div class='quote-text'>
+<div class="quote-title-wrapper clearfix">
+<div class='quote-title'><span class='the-title'>StreetReach</span></div> </div>
+<div class="quote-content">
+<p>Really enjoying working with this theme. Once you get use to the main control of it, seems very easy to work with and does more than I expected. Also very impressed with the documentation that is available for it, including the online help. Support seems to always get back to me with an answer within a day (usually 12 hours or less). I think it is perfect for getting it going right out of the box, but also allows for someone with some technical experience to take it further if they so desire. The theme almost entices and encourages you to push yourself further because you can do so much with it if you are new with WP or site design but have some technical experience, and makes it an enjoyable experience. I am surprised with how much I am enjoying learning just from working with this theme. I will admit that I am very impressed with this theme overall from how user friendly it is, to all the bells and whistles (many I didn't even expect), to customer support. Great job with this theme IMO!</p>
+</div>
+</div>
+</blockquote>
+</div><div class="cbp-item">
+<blockquote class="clearfix small simple alignment-center post-939 jetpack-testimonial type-jetpack-testimonial status-publish hentry">
+<div class='quote-text'>
+<div class="quote-title-wrapper clearfix">
+<div class='quote-title'><span class='the-title'>chimpmedia</span></div> </div>
+<div class="quote-content">
+<p>Not only is this an awesome theme, but customer support is top rated! I develop a lot of sites for clients, and this may be my new go-to theme! I LOVE how the demo content comes with tons of pre-built Contact Form 7 templates, too! </p>
+<p>Thank you guys!</p>
+</div>
+</div>
+</blockquote>
+</div><div class="cbp-item">
+<blockquote class="clearfix small simple alignment-center post-938 jetpack-testimonial type-jetpack-testimonial status-publish hentry">
+<div class='quote-text'>
+<div class="quote-title-wrapper clearfix">
+<div class='quote-title'><span class='the-title'>three17design</span></div> </div>
+<div class="quote-content">
+<p>I needed to make some customizations, and I contacted support. They sent me the latest files, because they were making child-theme customization even easier. The site turned out great.</p>
+</div>
+</div>
+</blockquote>
+</div><div class="cbp-item">
+<blockquote class="clearfix small simple alignment-center post-936 jetpack-testimonial type-jetpack-testimonial status-publish hentry">
+<div class='quote-text'>
+<div class="quote-title-wrapper clearfix">
+<div class='quote-title'><span class='the-title'>brandenjriggs</span></div> </div>
+<div class="quote-content">
+<p>The actual theme/template is working out great for me. This is my first WordPress project, so there was a big learning curve in the beginning, but i am quickly catching on. The thing I'm really impressed with is the customer service, there have been a few changes i couldn't figure out how to make on my own. After emailing support with questions, Nikolay responded and has been most helpful, he's offered advice on a couple things, and has given me the actual css code for me to copy paste into my website for a couple others, how great is that!!! Branden</p>
+</div>
+</div>
+</blockquote>
+</div><div class="cbp-item">
+<blockquote class="clearfix small simple alignment-center post-935 jetpack-testimonial type-jetpack-testimonial status-publish hentry">
+<div class='quote-text'>
+<div class="quote-title-wrapper clearfix">
+<div class='quote-title'><span class='the-title'>Heidemarie</span></div> </div>
+<div class="quote-content">
+<p>As a novice of WordPress with no coding knowledge, I found working with VamTam's theme has transformed by initial anxiety and confusion to one of confidence and mastery. Their drag-and-drop feature allows me to utilize it's amazing array of powerful processes with ease, producing a website of professional quality both in appearance and performance, while my son the computer programmer can use the TEXT mode to encode additional embellishments. I am grateful to the dedicated support team for their excellent tutorials and personal attention they provided to help me whenever I ran into problems. BRAVO, VamTam!</p>
+</div>
+</div>
+</blockquote>
+</div><div class="cbp-item">
+<blockquote class="clearfix small simple alignment-center post-934 jetpack-testimonial type-jetpack-testimonial status-publish hentry">
+<div class='quote-text'>
+<div class="quote-title-wrapper clearfix">
+<div class='quote-title'><span class='the-title'>drcolomer</span></div> </div>
+<div class="quote-content">
+<p>It's a great theme, nice design, flexibility and the support very well, amazing. Good people they try to resolve all your problems.</p>
+</div>
+</div>
+</blockquote>
+</div><div class="cbp-item">
+<blockquote class="clearfix small simple alignment-center post-933 jetpack-testimonial type-jetpack-testimonial status-publish hentry">
+<div class='quote-text'>
+<div class="quote-title-wrapper clearfix">
+<div class='quote-title'><span class='the-title'>Sova-L</span></div> </div>
+<div class="quote-content">
+<p>The Theme is perfectly developed to the needs of repair company or private ent. Documentration is very profesional and easy-to-read for non-professional user (as just our office team). This web is full and ready-to-use without any additional tools. I am really happy to have it )) Thank you!!</p>
+</div>
+</div>
+</blockquote>
+</div><div class="cbp-item">
+<blockquote class="clearfix small simple alignment-center post-932 jetpack-testimonial type-jetpack-testimonial status-publish hentry">
+<div class='quote-text'>
+<div class="quote-title-wrapper clearfix">
+<div class='quote-title'><span class='the-title'>nemanjaradevic</span></div> </div>
+<div class="quote-content">
+<p>This theme is quite customizable, some minor things like the duplicate content using wpml didn t work from copying from one language to the other but this is really minor. Very flexible to customize. Good documentation I would personally have the wpml shorcodes to be accepted within the boxes of the backend , there is a small workaround if you don t mind copy pasting some stuff in ftp Support is experienced and good, just give them time and read documentation first</p>
+</div>
+</div>
+</blockquote>
+</div><div class="cbp-item">
+<blockquote class="clearfix small simple alignment-center post-931 jetpack-testimonial type-jetpack-testimonial status-publish hentry">
+<div class='quote-text'>
+<div class="quote-title-wrapper clearfix">
+<div class='quote-title'><span class='the-title'>bobbyong</span></div> </div>
+<div class="quote-content">
+<p>The template is highly customizable. I am very happy with the way I can change things to make it appear the way I want. The customer support is absolutely top notch! I would give it 5 out of 5 stars. Everytime I find difficulty customising the theme, I just write a simple email and within 24 hours someone from the support desk will help me out. If required, I can provide my login credentials and the admin will investigate my problem further and provide a solution.</p>
+</div>
+</div>
+</blockquote>
+</div><div class="cbp-item">
+<blockquote class="clearfix small simple alignment-center post-930 jetpack-testimonial type-jetpack-testimonial status-publish hentry">
+<div class='quote-text'>
+<div class="quote-title-wrapper clearfix">
+<div class='quote-title'><span class='the-title'>PhilipStancil</span></div> </div>
+<div class="quote-content">
+<p>Your customer support was always quick and dependable. I was surprised by how responsive you guys were, and you stayed with the problem until we had a solution. Thank you!</p>
+</div>
+</div>
+</blockquote>
+</div><div class="cbp-item">
+<blockquote class="clearfix small simple alignment-center post-929 jetpack-testimonial type-jetpack-testimonial status-publish hentry">
+<div class='quote-text'>
+<div class="quote-title-wrapper clearfix">
+<div class='quote-title'><span class='the-title'>sinoun</span></div> </div>
+<div class="quote-content">
+<p>Incredible theme and developer! Customer support is one of the best I've seen. I've purchased many themes over the years and this is one of the best. Keep up the great work! Your service is much appreciated.</p>
+</div>
+</div>
+</blockquote>
+</div><div class="cbp-item">
+<blockquote class="clearfix small simple alignment-center post-928 jetpack-testimonial type-jetpack-testimonial status-publish hentry">
+<div class='quote-text'>
+<div class="quote-title-wrapper clearfix">
+<div class='quote-title'><span class='the-title'>rogerairline</span></div> </div>
+<div class="quote-content">
+<p>Well designed theme, includes everything that a gym needs. Also impressed by the quick loading time and responsiveness of the template. Nicely done.<br />
+Thanks!</p>
+</div>
+</div>
+</blockquote>
+</div><div class="cbp-item">
+<blockquote class="clearfix small simple alignment-center post-927 jetpack-testimonial type-jetpack-testimonial status-publish hentry">
+<div class='quote-text'>
+<div class="quote-title-wrapper clearfix">
+<div class='quote-title'><span class='the-title'>kmolina</span></div> </div>
+<div class="quote-content">
+<p>I love this theme! Not only is it easy to use but the robustness is amazing. I love the event feature and the donate features. I also had an error message that came up and I received an email within 24 hours with a solution to my problem. Great customer service!</p>
+</div>
+</div>
+</blockquote>
+</div><div class="cbp-item">
+<blockquote class="clearfix small simple alignment-center post-926 jetpack-testimonial type-jetpack-testimonial status-publish hentry">
+<div class='quote-text'>
+<div class="quote-title-wrapper clearfix">
+<div class='quote-title'><span class='the-title'>mtlawoffices</span></div> </div>
+<div class="quote-content">
+<p>Awesome design, easy for me to learn (and I am no expert). I was able to create a beautiful site, with beautiful, modern pages...your hard work has allowed me to build the site I always wanted - thank you!! I would buy from this designer again.</p>
+</div>
+</div>
+</blockquote>
+</div></div> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-col-group fl-node-5ad8bce37ef44" data-node="5ad8bce37ef44">
+<div class="fl-col fl-node-5ad8bce37f05d" data-node="5ad8bce37f05d">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-vamtam-button fl-node-5ad8bce37ee91" data-node="5ad8bce37ee91">
+<div class="fl-module-content fl-node-content">
+<div class="vamtam-button-wrap vamtam-button-width-auto" style="text-align:center">
+<a href="/reviews/" target="_self" class="vamtam-button accent1 hover-accent6 button-underline icon-animation-disable" role="button" style="font-size:14px;line-height:16px;padding:1px 0px;">
+<span class="vamtam-button-text">Need more? Read more →</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div> </div>
+</article>
+</div>
+</div>
+</div>
+<div class="footer-wrapper" style="">
+<footer id="main-footer" class="main-footer">
+<link rel='stylesheet' id='fl-builder-layout-918-css' href='https://vamtam.com/wp-content/uploads/bb-plugin/cache/918-layout-partial.css?ver=7b53ac3b9de21e803edd09a0b7c0cca2' type='text/css' media='all' />
+<div class="fl-builder-content fl-builder-content-918 fl-builder-template fl-builder-row-template fl-builder-global-templates-locked" data-post-id="918"><div class="fl-row fl-row-full-width fl-row-bg-color fl-node-5ade19b469488 fl-row-bg-attachment-scroll" data-node="5ade19b469488">
+<div class="fl-row-content-wrap">
+<div class="fl-row-content fl-row-fixed-width fl-node-content">
+<div class="fl-col-group fl-node-5ade19b468d1e fl-col-group-equal-height fl-col-group-align-top fl-col-group-custom-width" data-node="5ade19b468d1e">
+<div class="fl-col fl-node-5ade19b468df0 fl-col-small fl-col-has-cols" data-node="5ade19b468df0">
+<div class="fl-col-content fl-node-content">
+<div class="fl-col-group fl-node-5ade19b468ea6 fl-col-group-nested fl-col-group-equal-height fl-col-group-align-center fl-col-group-custom-width" data-node="5ade19b468ea6">
+<div class="fl-col fl-node-5ade19b468ee2 fl-col-small" data-node="5ade19b468ee2">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-vamtam-icon fl-node-5ade19b4690d7" data-node="5ade19b4690d7">
+<div class="fl-module-content fl-node-content">
+<span class="fl-icon-wrap">
+<span class="fl-icon">
+<a href="https://twitter.com/vamtam" target="_self">
+<i class="icon icon-b theme " data-icon="&#59716;"></i>
+</a> </span>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-col fl-node-5ade19b468f1f fl-col-small" data-node="5ade19b468f1f">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-photo fl-node-5ade19b469113" data-node="5ade19b469113">
+<div class="fl-module-content fl-node-content">
+<div class="fl-photo fl-photo-align-center" itemscope itemtype="http://schema.org/ImageObject">
+<div class="fl-photo-content fl-photo-img-png">
+<a href="https://1.envato.market/vamtam-portfolio" target="_blank" rel="noopener" itemprop="url" title="tf-logo">
+<img loading="lazy" class="fl-photo-img wp-image-832 size-full vamtam-lazyload-noparent" src="https://vamtam.com/wp-content/uploads/2018/04/tf-logo.png" data-srcset="https://vamtam.com/wp-content/uploads/2018/04/tf-logo.png" srcset="data:image/svg+xml;utf8,&lt;svg%20xmlns=&quot;http://www.w3.org/2000/svg&quot;%20viewBox=&quot;0%200%20150%2029&quot;%20height=&quot;29px&quot;%20width=&quot;150px&quot;/&gt;" alt="tf-logo" itemprop="image" height="29" width="150" data-link-type="url" title="tf-logo" sizes="(max-width: 768px) 100vw, (min-width: 1260px) 214px,17vw" /> </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-col fl-node-5ade19b468e2d fl-col-small" data-node="5ade19b468e2d">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-photo fl-node-5ade19b468fe6" data-node="5ade19b468fe6">
+<div class="fl-module-content fl-node-content">
+<div class="fl-photo fl-photo-align-center" itemscope itemtype="http://schema.org/ImageObject">
+<div class="fl-photo-content fl-photo-img-svg">
+<img loading="lazy" class="fl-photo-img wp-image-804 size-full" src="https://vamtam.com/wp-content/uploads/2018/04/logo-footer.svg" alt="logo-footer" itemprop="image" height="67" width="105" title="logo-footer" />
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-col fl-node-5ade19b468e69 fl-col-small fl-col-has-cols" data-node="5ade19b468e69">
+<div class="fl-col-content fl-node-content">
+<div class="fl-col-group fl-node-5ade19b469023 fl-col-group-nested fl-col-group-equal-height fl-col-group-align-center fl-col-group-custom-width" data-node="5ade19b469023">
+<div class="fl-col fl-node-5ade19b46905f fl-col-small" data-node="5ade19b46905f">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-photo fl-node-5f0b672d6a57a" data-node="5f0b672d6a57a">
+<div class="fl-module-content fl-node-content">
+<div class="fl-photo fl-photo-align-center" itemscope itemtype="http://schema.org/ImageObject">
+<div class="fl-photo-content fl-photo-img-png">
+<a href="https://www.bluehost.com/track/vamtam/" target="_blank" rel="noopener" itemprop="url" title="160x40PW">
+<img loading="lazy" class="fl-photo-img wp-image-1133 size-full vamtam-lazyload-noparent" src="https://vamtam.com/wp-content/uploads/2018/04/160x40PW.png" data-srcset="https://vamtam.com/wp-content/uploads/2018/04/160x40PW.png" srcset="data:image/svg+xml;utf8,&lt;svg%20xmlns=&quot;http://www.w3.org/2000/svg&quot;%20viewBox=&quot;0%200%20160%2040&quot;%20height=&quot;40px&quot;%20width=&quot;160px&quot;/&gt;" alt="160x40PW" itemprop="image" height="40" width="160" data-link-type="url" title="160x40PW" sizes="(max-width: 768px) 100vw, (min-width: 1260px) 214px,17vw" /> </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-col fl-node-5ade19b46909b fl-col-small" data-node="5ade19b46909b">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-photo fl-node-5f0b65763007c" data-node="5f0b65763007c">
+<div class="fl-module-content fl-node-content">
+<div class="fl-photo fl-photo-align-center" itemscope itemtype="http://schema.org/ImageObject">
+<div class="fl-photo-content fl-photo-img-png">
+<a href="https://elementor.com/pricing/?ref=13981" target="_blank" rel="noopener" itemprop="url" title="elementor-logo@3x">
+<img loading="lazy" class="fl-photo-img wp-image-1157 size-full vamtam-lazyload-noparent" src="https://vamtam.com/wp-content/uploads/2018/04/elementor-logo@3x.png" alt="elementor-logo@3x" itemprop="image" height="120" width="456" data-link-type="url" title="elementor-logo@3x" sizes="(max-width: 768px) 100vw, (min-width: 1260px) 214px,17vw" srcset="data:image/svg+xml;utf8,&lt;svg%20xmlns=&quot;http://www.w3.org/2000/svg&quot;%20viewBox=&quot;0%200%20456%20120&quot;%20height=&quot;120px&quot;%20width=&quot;456px&quot;/&gt;" data-srcset="https://vamtam.com/wp-content/uploads/2018/04/elementor-logo@3x.png 456w, https://vamtam.com/wp-content/uploads/2018/04/elementor-logo@3x-300x79.png 300w, https://vamtam.com/wp-content/uploads/2018/04/elementor-logo@3x-420x111.png 420w, https://vamtam.com/wp-content/uploads/2018/04/elementor-logo@3x-315x83.png 315w" /> </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-col-group fl-node-5ae349b1c7b98" data-node="5ae349b1c7b98">
+<div class="fl-col fl-node-5ae349b1c897d" data-node="5ae349b1c897d">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-vamtam-separator fl-node-5ae349d51a5cb" data-node="5ae349d51a5cb">
+<div class="fl-module-content fl-node-content">
+<div class="fl-separator" style="border-top-color:#494A4B;opacity:1"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-col-group fl-node-5ade19b468db3 fl-col-group-equal-height fl-col-group-align-top" data-node="5ade19b468db3">
+<div class="fl-col fl-node-5ade19b4691c9 fl-col-has-cols" data-node="5ade19b4691c9">
+<div class="fl-col-content fl-node-content">
+<div class="fl-col-group fl-node-5ade19b469242 fl-col-group-nested fl-col-group-custom-width" data-node="5ade19b469242">
+<div class="fl-col fl-node-5ade19b46927e fl-col-small" data-node="5ade19b46927e">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-widget fl-node-5ade19b469347" data-node="5ade19b469347">
+<div class="fl-module-content fl-node-content">
+<div class="fl-widget">
+<link rel='stylesheet' id='vamtam-widgets-general-css' href='https://vamtam.com/wp-content/themes/nex/vamtam/assets/css/dist/widgets/general.css?ver=1611093026' type='text/css' media="(max-width: 0px)" onload="media='all'" /><noscript><link rel='stylesheet'   href='https://vamtam.com/wp-content/themes/nex/vamtam/assets/css/dist/widgets/general.css?ver=1611093026' type='text/css' media='all' />
+</noscript>
+<link rel='stylesheet' id='vamtam-widget-nav-menu-css' href='https://vamtam.com/wp-content/themes/nex/vamtam/assets/css/dist/widgets/nav-menu.css?ver=1611093026' type='text/css' media="(max-width: 0px)" onload="media='all'" /><noscript><link rel='stylesheet'   href='https://vamtam.com/wp-content/themes/nex/vamtam/assets/css/dist/widgets/nav-menu.css?ver=1611093026' type='text/css' media='all' />
+</noscript>
+<div class="widget widget_nav_menu"><div class="menu-main-footer-container"><ul id="menu-main-footer" class="menu"><li id="menu-item-762" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-6 current_page_item menu-item-762"><a href="https://vamtam.com/" aria-current="page">Home</a></li>
+<li id="menu-item-1072" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1072"><a href="https://vamtam.com/about/">About</a></li>
+<li id="menu-item-763" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-763"><a href="https://vamtam.com/themes/">Themes</a></li>
+<li id="menu-item-1151" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1151"><a href="https://vamtam.com/recommended-hostings/">Partners</a></li>
+<li id="menu-item-1073" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1073"><a href="https://vamtam.com/reviews/">Hall of Fame</a></li>
+</ul></div></div></div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-col fl-node-5ade19b4692bc fl-col-small" data-node="5ade19b4692bc">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-widget fl-node-5ade19b469396" data-node="5ade19b469396">
+<div class="fl-module-content fl-node-content">
+<div class="fl-widget">
+<div class="widget widget_nav_menu"><div class="menu-footer1-container"><ul id="menu-footer1" class="menu"><li id="menu-item-1075" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1075"><a href="https://vamtam.com/we-are-hiring/">We are hiring</a></li>
+<li id="menu-item-1077" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1077"><a href="https://vamtam.com/contact/">Contact Us</a></li>
+<li id="menu-item-1074" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1074"><a href="https://vamtam.com/terms-and-conditions/">Terms and Conditions</a></li>
+<li id="menu-item-1076" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1076"><a href="https://vamtam.com/privacy-policy/">Privacy Policy</a></li>
+</ul></div></div></div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-col fl-node-5ade19b4692fa fl-col-small" data-node="5ade19b4692fa">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-widget fl-node-5ade19b4693d2" data-node="5ade19b4693d2">
+<div class="fl-module-content fl-node-content">
+<div class="fl-widget">
+<div class="widget widget_nav_menu"><div class="menu-help-menu-container"><ul id="menu-help-menu" class="menu"><li id="menu-item-758" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-758"><a href="https://vamtam.com/support/">Help Desk</a></li>
+<li id="menu-item-759" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-759"><a href="http://support.vamtam.com/support/solutions/articles/4055">Support Policy</a></li>
+<li id="menu-item-760" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-760"><a href="http://support.vamtam.com/support/solutions/articles/183764">Video Guides for Beginners</a></li>
+<li id="menu-item-761" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-761"><a href="http://support.vamtam.com/support/solutions/folders/4677">FAQ</a></li>
+</ul></div></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fl-col-group fl-node-5ade19b468d72" data-node="5ade19b468d72">
+<div class="fl-col fl-node-5ade19b469151" data-node="5ade19b469151">
+<div class="fl-col-content fl-node-content">
+<div class="fl-module fl-module-rich-text fl-node-5ade19b46918d" data-node="5ade19b46918d">
+<div class="fl-module-content fl-node-content">
+<div class="fl-rich-text">
+<h6 style="text-align: center;">© Copyright 2009 - 2021    <a href="https://1.envato.market/vamtam-portfolio">VamTam Themes</a></h6>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div> </footer>
+</div>
+</div>
+<div id="vamtam-overlay-search">
+<button id="vamtam-overlay-search-close"><span class='icon shortcode theme  use-hover' style=''>&#59700;</span></button>
+<form action="https://vamtam.com/" class="searchform" method="get" role="search" novalidate="">
+<input type="search" required="required" placeholder="Search..." name="s" value="" />
+</form>
+</div>
+<div id="scroll-to-top" class="vamtam-scroll-to-top icon">&#59705;</div>
+<script type="text/javascript">
+		if(typeof revslider_showDoubleJqueryError === "undefined") {
+			function revslider_showDoubleJqueryError(sliderID) {
+				var err = "<div class='rs_error_message_box'>";
+				err += "<div class='rs_error_message_oops'>Oops...</div>";
+				err += "<div class='rs_error_message_content'>";
+				err += "You have some jquery.js library include that comes after the Slider Revolution files js inclusion.<br>";
+				err += "To fix this, you can:<br>&nbsp;&nbsp;&nbsp; 1. Set 'Module General Options' -> 'Advanced' -> 'jQuery & OutPut Filters' -> 'Put JS to Body' to on";
+				err += "<br>&nbsp;&nbsp;&nbsp; 2. Find the double jQuery.js inclusion and remove it";
+				err += "</div>";
+			err += "</div>";
+				var slider = document.getElementById(sliderID); slider.innerHTML = err; slider.style.display = "block";
+			}
+		}
+		</script>
+<script type='text/javascript' defer src='https://vamtam.com/wp-content/plugins/vamtam-elements-b/assets/fl-photo.js?ver=5.6.2' id='vamtam-fl-photo-js'></script>
+<script type='text/javascript' defer src='https://vamtam.com/wp-content/plugins/vamtam-elements-b/assets/vamtam-numbers.js?ver=5.6.2' id='vamtam-numbers-js'></script>
+<script type='text/javascript' defer src='https://vamtam.com/wp-content/uploads/bb-plugin/cache/6-layout.js?ver=2ab8957022c20b3078a20b599039649f' id='fl-builder-layout-6-js'></script>
+<script type='text/javascript' id='vamtam-all-js-extra'>
+/* <![CDATA[ */
+var VAMTAM_FRONT = {"ajaxurl":"https:\/\/vamtam.com\/wp-admin\/admin-ajax.php","jspath":"https:\/\/vamtam.com\/wp-content\/themes\/nex\/vamtam\/assets\/js\/","mobile_header_breakpoint":"600px","cube_path":"https:\/\/vamtam.com\/wp-content\/themes\/nex\/vamtam\/assets\/cubeportfolio\/","beaver_responsive":"992","beaver_small":"768","content_width":"1260"};
+/* ]]> */
+</script>
+<script type='text/javascript' defer src='https://vamtam.com/wp-content/themes/nex/vamtam/assets/js/all.min.js?ver=1611093026' id='vamtam-all-js'></script>
+<script type='text/javascript' defer src='https://vamtam.com/wp-includes/js/hoverIntent.min.js?ver=1.8.1' id='hoverIntent-js'></script>
+<script type='text/javascript' id='megamenu-js-extra'>
+/* <![CDATA[ */
+var megamenu = {"timeout":"300","interval":"100"};
+/* ]]> */
+</script>
+<script type='text/javascript' defer src='https://vamtam.com/wp-content/plugins/megamenu/js/maxmegamenu.js?ver=2.9.2' id='megamenu-js'></script>
+<script type='text/javascript' defer src='https://vamtam.com/wp-includes/js/wp-embed.min.js?ver=5.6.2' id='wp-embed-js'></script>
+<script type='text/javascript' defer src='https://vamtam.com/wp-content/themes/nex/vamtam/assets/js/build/sticky-header.min.js?ver=1611093026' id='vamtam-sticky-header-js'></script>
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"9700abca30","applicationID":"9339867","transactionName":"YFUHbUVUDBZZAkZZXFkfJFpDXA0LFxFTV1Y=","queueTime":0,"applicationTime":4749,"atts":"TBIEGw1OHxg=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
+

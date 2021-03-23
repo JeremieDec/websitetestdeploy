@@ -1,0 +1,416 @@
+Uri: https://themes.vamtam.com/?theme=lagar&n=1
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\index.htm
+Content Type: text/html
+
+Uri: https://fonts.gstatic.com/s/montserrat/v12/JTURjIg1_i6t8kCHKm45_cJD3gfD_u50.woff2
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\s\montserrat\v12\JTURjIg1_i6t8kCHKm45_cJD3gfD_u50.woff2
+Content Type: font/woff2
+
+Uri: https://fonts.gstatic.com/s/montserrat/v12/JTURjIg1_i6t8kCHKm45_cJD3gnD_g.woff2
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\s\montserrat\v12\JTURjIg1_i6t8kCHKm45_cJD3gnD_g.woff2
+Content Type: font/woff2
+
+Uri: https://fonts.gstatic.com/s/montserrat/v12/JTUSjIg1_i6t8kCHKm459Wdhyzbi.woff2
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\s\montserrat\v12\JTUSjIg1_i6t8kCHKm459Wdhyzbi.woff2
+Content Type: font/woff2
+
+Uri: https://fonts.gstatic.com/s/montserrat/v12/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\s\montserrat\v12\JTUSjIg1_i6t8kCHKm459Wlhyw.woff2
+Content Type: font/woff2
+
+Uri: https://fonts.gstatic.com/s/montserrat/v12/JTURjIg1_i6t8kCHKm45_ZpC3gfD_u50.woff2
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\s\montserrat\v12\JTURjIg1_i6t8kCHKm45_ZpC3gfD_u50.woff2
+Content Type: font/woff2
+
+Uri: https://fonts.gstatic.com/s/montserrat/v12/JTURjIg1_i6t8kCHKm45_ZpC3gnD_g.woff2
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\s\montserrat\v12\JTURjIg1_i6t8kCHKm45_ZpC3gnD_g.woff2
+Content Type: font/woff2
+
+Uri: https://themes.vamtam.com/themedemo/arrow-down.svg
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\themedemo\arrow-down.svg
+Content Type: image/svg+xml
+
+Uri: https://themes.vamtam.com/themedemo/close.svg
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\themedemo\close.svg
+Content Type: image/svg+xml
+
+Uri: https://themes.vamtam.com/favicon.png
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\favicon.png
+Content Type: image/png
+
+Uri: https://vamtam.com/
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\index-1.htm
+Content Type: text/html
+
+Uri: https://themes.vamtam.com/?theme=estudiar
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\index-2.htm
+Content Type: text/html
+
+Uri: https://themes.vamtam.com/?theme=caridad
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\index-3.htm
+Content Type: text/html
+
+Uri: https://themes.vamtam.com/?theme=bijoux
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\index-4.htm
+Content Type: text/html
+
+Uri: https://themes.vamtam.com/?theme=lagar
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\index-5.htm
+Content Type: text/html
+
+Uri: https://themes.vamtam.com/?theme=salute
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\index-6.htm
+Content Type: text/html
+
+Uri: https://themes.vamtam.com/?theme=skole
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\index-7.htm
+Content Type: text/html
+
+Uri: https://themes.vamtam.com/?theme=scuola
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\index-8.htm
+Content Type: text/html
+
+Uri: https://themes.vamtam.com/?theme=gast
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\index-9.htm
+Content Type: text/html
+
+Uri: https://themes.vamtam.com/?theme=byra
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\index-10.htm
+Content Type: text/html
+
+Uri: https://themes.vamtam.com/?theme=komo
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\index-11.htm
+Content Type: text/html
+
+Uri: https://themes.vamtam.com/?theme=clany
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\index-12.htm
+Content Type: text/html
+
+Uri: https://themes.vamtam.com/?theme=mann
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\index-13.htm
+Content Type: text/html
+
+Uri: https://themes.vamtam.com/?theme=mozo
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\index-14.htm
+Content Type: text/html
+
+Uri: https://themes.vamtam.com/?theme=alis
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\index-15.htm
+Content Type: text/html
+
+Uri: https://themes.vamtam.com/?theme=morz
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\index-16.htm
+Content Type: text/html
+
+Uri: https://themes.vamtam.com/?theme=pur
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\index-17.htm
+Content Type: text/html
+
+Uri: https://themes.vamtam.com/?theme=nex
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\index-18.htm
+Content Type: text/html
+
+Uri: https://themes.vamtam.com/?theme=landscaping
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\index-19.htm
+Content Type: text/html
+
+Uri: https://themes.vamtam.com/?theme=consulting
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\index-20.htm
+Content Type: text/html
+
+Uri: https://themes.vamtam.com/?theme=tattoo
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\index-21.htm
+Content Type: text/html
+
+Uri: https://themes.vamtam.com/?theme=vip-restaurant
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\index-22.htm
+Content Type: text/html
+
+Uri: https://themes.vamtam.com/?theme=hair
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\index-23.htm
+Content Type: text/html
+
+Uri: https://themes.vamtam.com/?theme=construction
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\index-24.htm
+Content Type: text/html
+
+Uri: https://themes.vamtam.com/?theme=auto
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\index-25.htm
+Content Type: text/html
+
+Uri: https://themes.vamtam.com/?theme=lawyer
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\index-26.htm
+Content Type: text/html
+
+Uri: https://themes.vamtam.com/?theme=fitness
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\index-27.htm
+Content Type: text/html
+
+Uri: https://themes.vamtam.com/?theme=church-event
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\index-28.htm
+Content Type: text/html
+
+Uri: https://themes.vamtam.com/?theme=health-center
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\index-29.htm
+Content Type: text/html
+
+Uri: https://themes.vamtam.com/?theme=honeymoon
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\index-30.htm
+Content Type: text/html
+
+Uri: https://themes.vamtam.com/?theme=the-wedding-day
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\index-31.htm
+Content Type: text/html
+
+Uri: https://lagar.vamtam.com/
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\index-32.htm
+Content Type: text/html
+
+Uri: https://accounts.google.com/ServiceLogin?passive=1209600&osid=1&continue=https://plus.google.com/103140900984141316611&followup=https://plus.google.com/103140900984141316611
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\ServiceLogin.html
+Content Type: text/html
+
+Uri: https://estudiar.vamtam.com/landing-page/
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\landing-page\index.htm
+Content Type: text/html
+
+Uri: https://caridad.vamtam.com/landing-page/
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\landing-page\index-1.htm
+Content Type: text/html
+
+Uri: https://bijoux.vamtam.com/theme-presentation/
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\theme-presentation\index.htm
+Content Type: text/html
+
+Uri: https://lagar.vamtam.com/theme-presentation/
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\theme-presentation\index-1.htm
+Content Type: text/html
+
+Uri: https://salute.vamtam.com/landing-page/
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\landing-page\index-2.htm
+Content Type: text/html
+
+Uri: https://skole.vamtam.com/landing-page/
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\landing-page\index-3.htm
+Content Type: text/html
+
+Uri: https://scuola.vamtam.com/theme-presentation/
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\theme-presentation\index-2.htm
+Content Type: text/html
+
+Uri: https://gast.vamtam.com/theme-presentation/
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\theme-presentation\index-3.htm
+Content Type: text/html
+
+Uri: https://byra.vamtam.com/theme-presentation/
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\theme-presentation\index-4.htm
+Content Type: text/html
+
+Uri: https://komo.vamtam.com/theme-presentation/
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\theme-presentation\index-5.htm
+Content Type: text/html
+
+Uri: https://clany.vamtam.com/theme-presentation/
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\theme-presentation\index-6.htm
+Content Type: text/html
+
+Uri: https://mann.vamtam.com/theme-presentation/
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\theme-presentation\index-7.htm
+Content Type: text/html
+
+Uri: https://mozo.vamtam.com/theme-presentation/
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\theme-presentation\index-8.htm
+Content Type: text/html
+
+Uri: https://alis.vamtam.com/theme-presentation/
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\theme-presentation\index-9.htm
+Content Type: text/html
+
+Uri: https://morz.vamtam.com/theme-presentation/
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\theme-presentation\index-10.htm
+Content Type: text/html
+
+Uri: https://pur.vamtam.com/theme-presentation/
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\theme-presentation\index-11.htm
+Content Type: text/html
+
+Uri: https://nex.vamtam.com/theme-presentation/
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\theme-presentation\index-12.htm
+Content Type: text/html
+
+Uri: https://landscaping.vamtam.com/theme-presentation/
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\theme-presentation\index-13.htm
+Content Type: text/html
+
+Uri: https://consulting.vamtam.com/theme-presentation/
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\theme-presentation\index-14.htm
+Content Type: text/html
+
+Uri: https://tattoo.vamtam.com/theme-presentation/
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\theme-presentation\index-15.htm
+Content Type: text/html
+
+Uri: https://vip-restaurant.vamtam.com/welcome/
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\welcome\index.htm
+Content Type: text/html
+
+Uri: https://hair-beauty.vamtam.com/welcome/
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\welcome\index-1.htm
+Content Type: text/html
+
+Uri: https://construction.vamtam.com/welcome/
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\welcome\index-2.htm
+Content Type: text/html
+
+Uri: https://auto-repair.vamtam.com/welcome/
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\welcome\index-3.htm
+Content Type: text/html
+
+Uri: https://lawyers-attorneys.vamtam.com/welcome/
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\welcome\index-4.htm
+Content Type: text/html
+
+Uri: https://fitness-wellness.vamtam.com/welcome/
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\welcome\index-5.htm
+Content Type: text/html
+
+Uri: https://health-center.vamtam.com/welcome/
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\welcome\index-7.htm
+Content Type: text/html
+
+Uri: https://honeymoon.vamtam.com/
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\index-33.htm
+Content Type: text/html
+
+Uri: https://the-wedding-day.vamtam.com/homes-preview/
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\homes-preview\index.htm
+Content Type: text/html
+
+Uri: https://themeforest.net/user/vamtam?irgwc=1&clickid=&iradid=275988&irpid=1240954&iradtype=ONLINE_TRACKING_LINK&irmptype=&mp_value1=&utm_campaign=af_impact_radius_1240954&utm_medium=affiliate&utm_source=impact_radius
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\user\vamtam.html
+Content Type: text/html
+
+Uri: https://themeforest.net/item/lagar-wine-shop-wordpress/28922640?irgwc=1&clickid=&iradid=275988&irpid=1240954&iradtype=ONLINE_TRACKING_LINK&irmptype=&mp_value1=&utm_campaign=af_impact_radius_1240954&utm_medium=affiliate&utm_source=impact_radius
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\item\lagar-wine-shop-wordpress\28922640.html
+Content Type: text/html
+
+Uri: https://themeforest.net/item/estudiar-college-university-wordpress/30459672?irgwc=1&clickid=&iradid=275988&irpid=1240954&iradtype=ONLINE_TRACKING_LINK&irmptype=&mp_value1=&utm_campaign=af_impact_radius_1240954&utm_medium=affiliate&utm_source=impact_radius
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\item\estudiar-college-university-wordpress\30459672.html
+Content Type: text/html
+
+Uri: https://themeforest.net/item/caridad-charity-nonprofit-wordpress-theme/29896618?irgwc=1&clickid=&iradid=275988&irpid=1240954&iradtype=ONLINE_TRACKING_LINK&irmptype=&mp_value1=&utm_campaign=af_impact_radius_1240954&utm_medium=affiliate&utm_source=impact_radius
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\item\caridad-charity-nonprofit-wordpress-theme\29896618.html
+Content Type: text/html
+
+Uri: https://themeforest.net/item/bijoux-handmade-jewelry-shop/29485321?irgwc=1&clickid=&iradid=275988&irpid=1240954&iradtype=ONLINE_TRACKING_LINK&irmptype=&mp_value1=&utm_campaign=af_impact_radius_1240954&utm_medium=affiliate&utm_source=impact_radius
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\item\bijoux-handmade-jewelry-shop\29485321.html
+Content Type: text/html
+
+Uri: https://themeforest.net/item/salute-medical-wordpress/27473970?irgwc=1&clickid=&iradid=275988&irpid=1240954&iradtype=ONLINE_TRACKING_LINK&irmptype=&mp_value1=&utm_campaign=af_impact_radius_1240954&utm_medium=affiliate&utm_source=impact_radius
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\item\salute-medical-wordpress\27473970.html
+Content Type: text/html
+
+Uri: https://themeforest.net/item/skole-preschool-kindergarten-wordpress-elementor/26875770?irgwc=1&clickid=&iradid=275988&irpid=1240954&iradtype=ONLINE_TRACKING_LINK&irmptype=&mp_value1=&utm_campaign=af_impact_radius_1240954&utm_medium=affiliate&utm_source=impact_radius
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\item\skole-preschool-kindergarten-wordpress-elementor\26875770.html
+Content Type: text/html
+
+Uri: https://themeforest.net/item/scuola-language-school-wordpress-elementor/26355172?irgwc=1&clickid=&iradid=275988&irpid=1240954&iradtype=ONLINE_TRACKING_LINK&irmptype=&mp_value1=&utm_campaign=af_impact_radius_1240954&utm_medium=affiliate&utm_source=impact_radius
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\item\scuola-language-school-wordpress-elementor\26355172.html
+Content Type: text/html
+
+Uri: https://themeforest.net/item/gast-hotel-wordpress/24439748?irgwc=1&clickid=&iradid=275988&irpid=1240954&iradtype=ONLINE_TRACKING_LINK&irmptype=&mp_value1=&utm_campaign=af_impact_radius_1240954&utm_medium=affiliate&utm_source=impact_radius
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\item\gast-hotel-wordpress\24439748.html
+Content Type: text/html
+
+Uri: https://themeforest.net/item/byra-digital-agency-startup-wordpress/23896770?irgwc=1&clickid=&iradid=275988&irpid=1240954&iradtype=ONLINE_TRACKING_LINK&irmptype=&mp_value1=&utm_campaign=af_impact_radius_1240954&utm_medium=affiliate&utm_source=impact_radius
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\item\byra-digital-agency-startup-wordpress\23896770.html
+Content Type: text/html
+
+Uri: https://themeforest.net/item/komo-bike-shop-store-rental-tours/23199514?irgwc=1&clickid=&iradid=275988&irpid=1240954&iradtype=ONLINE_TRACKING_LINK&irmptype=&mp_value1=&utm_campaign=af_impact_radius_1240954&utm_medium=affiliate&utm_source=impact_radius
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\item\komo-bike-shop-store-rental-tours\23199514.html
+Content Type: text/html
+
+Uri: https://themeforest.net/item/clany-cleaning-services-wordpress/22945179?irgwc=1&clickid=&iradid=275988&irpid=1240954&iradtype=ONLINE_TRACKING_LINK&irmptype=&mp_value1=&utm_campaign=af_impact_radius_1240954&utm_medium=affiliate&utm_source=impact_radius
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\item\clany-cleaning-services-wordpress\22945179.html
+Content Type: text/html
+
+Uri: https://themeforest.net/item/ann-conference-events-wordpress/22763464?irgwc=1&clickid=&iradid=275988&irpid=1240954&iradtype=ONLINE_TRACKING_LINK&irmptype=&mp_value1=&utm_campaign=af_impact_radius_1240954&utm_medium=affiliate&utm_source=impact_radius
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\item\ann-conference-events-wordpress\22763464.html
+Content Type: text/html
+
+Uri: https://themeforest.net/item/mozo-music-band-wordpress/22302455?irgwc=1&clickid=&iradid=275988&irpid=1240954&iradtype=ONLINE_TRACKING_LINK&irmptype=&mp_value1=&utm_campaign=af_impact_radius_1240954&utm_medium=affiliate&utm_source=impact_radius
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\item\mozo-music-band-wordpress\22302455.html
+Content Type: text/html
+
+Uri: https://themeforest.net/item/alis-wedding-wedding-planner-wordpress/21770478?irgwc=1&clickid=&iradid=275988&irpid=1240954&iradtype=ONLINE_TRACKING_LINK&irmptype=&mp_value1=&utm_campaign=af_impact_radius_1240954&utm_medium=affiliate&utm_source=impact_radius
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\item\alis-wedding-wedding-planner-wordpress\21770478.html
+Content Type: text/html
+
+Uri: https://themeforest.net/item/morz-transport-cargo-logistic-wordpress/21623322?irgwc=1&clickid=&iradid=275988&irpid=1240954&iradtype=ONLINE_TRACKING_LINK&irmptype=&mp_value1=&utm_campaign=af_impact_radius_1240954&utm_medium=affiliate&utm_source=impact_radius
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\item\morz-transport-cargo-logistic-wordpress\21623322.html
+Content Type: text/html
+
+Uri: https://themeforest.net/item/pur-spa-wellness-wordpress/21501144?irgwc=1&clickid=&iradid=275988&irpid=1240954&iradtype=ONLINE_TRACKING_LINK&irmptype=&mp_value1=&utm_campaign=af_impact_radius_1240954&utm_medium=affiliate&utm_source=impact_radius
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\item\pur-spa-wellness-wordpress\21501144.html
+Content Type: text/html
+
+Uri: https://themeforest.net/item/nex-factory-industrial-wordpress/21200260?irgwc=1&clickid=&iradid=275988&irpid=1240954&iradtype=ONLINE_TRACKING_LINK&irmptype=&mp_value1=&utm_campaign=af_impact_radius_1240954&utm_medium=affiliate&utm_source=impact_radius
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\item\nex-factory-industrial-wordpress\21200260.html
+Content Type: text/html
+
+Uri: https://themeforest.net/item/landscaping-garden-landscaper-wordpress/20942637?irgwc=1&clickid=&iradid=275988&irpid=1240954&iradtype=ONLINE_TRACKING_LINK&irmptype=&mp_value1=&utm_campaign=af_impact_radius_1240954&utm_medium=affiliate&utm_source=impact_radius
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\item\landscaping-garden-landscaper-wordpress\20942637.html
+Content Type: text/html
+
+Uri: https://themeforest.net/item/consultancy-consulting-finance-wordpress/20264700?irgwc=1&clickid=&iradid=275988&irpid=1240954&iradtype=ONLINE_TRACKING_LINK&irmptype=&mp_value1=&utm_campaign=af_impact_radius_1240954&utm_medium=affiliate&utm_source=impact_radius
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\item\consultancy-consulting-finance-wordpress\20264700.html
+Content Type: text/html
+
+Uri: https://themeforest.net/item/tattoo-shop-theme-for-tattoo-piercing-studio/19997461?irgwc=1&clickid=&iradid=275988&irpid=1240954&iradtype=ONLINE_TRACKING_LINK&irmptype=&mp_value1=&utm_campaign=af_impact_radius_1240954&utm_medium=affiliate&utm_source=impact_radius
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\item\tattoo-shop-theme-for-tattoo-piercing-studio\19997461.html
+Content Type: text/html
+
+Uri: https://themeforest.net/item/restaurant-cafe-theme-for-restaurants-and-cafes/17965713?irgwc=1&clickid=&iradid=275988&irpid=1240954&iradtype=ONLINE_TRACKING_LINK&irmptype=&mp_value1=&utm_campaign=af_impact_radius_1240954&utm_medium=affiliate&utm_source=impact_radius
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\item\restaurant-cafe-theme-for-restaurants-and-cafes\17965713.html
+Content Type: text/html
+
+Uri: https://themeforest.net/item/beauty-hair-salon-theme-for-hair-salon-barber-shop-and-beauty-salon/15344439?irgwc=1&clickid=&iradid=275988&irpid=1240954&iradtype=ONLINE_TRACKING_LINK&irmptype=&mp_value1=&utm_campaign=af_impact_radius_1240954&utm_medium=affiliate&utm_source=impact_radius
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\item\beauty-hair-salon-theme-for-hair-salon-barber-shop-and-beauty-salon\15344439.html
+Content Type: text/html
+
+Uri: https://themeforest.net/item/construction-construction-building-company/11032581?clickid=&iradid=275988&iradtype=ONLINE_TRACKING_LINK&irgwc=1&irmptype=&irpid=1240954&mp_value1=&utm_campaign=af_impact_radius_1240954&utm_medium=affiliate&utm_source=impact_radius
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\item\construction-construction-building-company\11032581.html
+Content Type: text/html
+
+Uri: https://themeforest.net/item/auto-repair-car-mechanic-theme-for-mechanic-workshops-auto-repair-and-cars/9739323?clickid=&iradid=275988&iradtype=ONLINE_TRACKING_LINK&irgwc=1&irmptype=&irpid=1240954&mp_value1=&utm_campaign=af_impact_radius_1240954&utm_medium=affiliate&utm_source=impact_radius
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\item\auto-repair-car-mechanic-theme-for-mechanic-workshops-auto-repair-and-cars\9739323.html
+Content Type: text/html
+
+Uri: https://themeforest.net/item/lawyer-attorney-theme-for-lawyers-attorneys-and-law-firm/9144445?clickid=&iradid=275988&iradtype=ONLINE_TRACKING_LINK&irgwc=1&irmptype=&irpid=1240954&mp_value1=&utm_campaign=af_impact_radius_1240954&utm_medium=affiliate&utm_source=impact_radius
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\item\lawyer-attorney-theme-for-lawyers-attorneys-and-law-firm\9144445.html
+Content Type: text/html
+
+Uri: https://themeforest.net/item/gym-fit-theme-for-fitness-gym-and-fitness-centers/8860972?clickid=&iradid=275988&iradtype=ONLINE_TRACKING_LINK&irgwc=1&irmptype=&irpid=1240954&mp_value1=&utm_campaign=af_impact_radius_1240954&utm_medium=affiliate&utm_source=impact_radius
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\item\gym-fit-theme-for-fitness-gym-and-fitness-centers\8860972.html
+Content Type: text/html
+
+Uri: https://church-event.vamtam.com/welcome/
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\welcome\index-6.htm
+Content Type: text/html
+
+Uri: https://themeforest.net/item/church-and-events-theme-for-churches-and-events/7028545?clickid=&iradid=275988&iradtype=ONLINE_TRACKING_LINK&irgwc=1&irmptype=&irpid=1240954&mp_value1=&utm_campaign=af_impact_radius_1240954&utm_medium=affiliate&utm_source=impact_radius
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\item\church-and-events-theme-for-churches-and-events\7028545.html
+Content Type: text/html
+
+Uri: https://themeforest.net/item/medical-health-theme-for-medical-health-and-dentist-center/7322125?clickid=&iradid=275988&iradtype=ONLINE_TRACKING_LINK&irgwc=1&irmptype=&irpid=1240954&mp_value1=&utm_campaign=af_impact_radius_1240954&utm_medium=affiliate&utm_source=impact_radius
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\item\medical-health-theme-for-medical-health-and-dentist-center\7322125.html
+Content Type: text/html
+
+Uri: https://themeforest.net/item/honeymoon-wedding-wedding-and-wedding-planner/8103339?clickid=&iradid=275988&iradtype=ONLINE_TRACKING_LINK&irgwc=1&irmptype=&irpid=1240954&mp_value1=&utm_campaign=af_impact_radius_1240954&utm_medium=affiliate&utm_source=impact_radius
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\item\honeymoon-wedding-wedding-and-wedding-planner\8103339.html
+Content Type: text/html
+
+Uri: https://themeforest.net/item/the-wedding-day-wedding-wedding-planner/5872261?clickid=&iradid=275988&iradtype=ONLINE_TRACKING_LINK&irgwc=1&irmptype=&irpid=1240954&mp_value1=&utm_campaign=af_impact_radius_1240954&utm_medium=affiliate&utm_source=impact_radius
+File Name: C:\Users\Jeremie\Desktop\Vignobles\SavedWebsite\themes.vamtam.com\item\the-wedding-day-wedding-wedding-planner\5872261.html
+Content Type: text/html
+
